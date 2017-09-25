@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.lorne</groupId>
-    <artifactId>weixin</artifactId>
+    <artifactId>pay</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>weixin</name>
-    <description>weixin project for Spring Boot</description>
+    <name>pay</name>
+    <description>pay project for Spring Boot</description>
 
     <repositories>
         <repository>
