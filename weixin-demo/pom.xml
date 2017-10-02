@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.lorne</groupId>
-    <artifactId>pay-weixin</artifactId>
+    <artifactId>pay-weixin-demo</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>pay-weixin</name>
-    <description>pay-weixin project for Spring Boot</description>
+    <name>pay-weixin-demo</name>
+    <description>pay-weixin-demo project for Spring Boot</description>
 
     <repositories>
         <repository>
@@ -27,12 +27,12 @@
 
 
 
-    <!--<parent>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
-        <!--<version>1.5.4.RELEASE</version>-->
-        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-    <!--</parent>-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
 
     <properties>
@@ -47,30 +47,13 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.lorne.core</groupId>
-            <artifactId>lorne_core</artifactId>
-            <version>2.0.0</version>
-        </dependency>
 
         <dependency>
-            <groupId>com.lorne.core</groupId>
-            <artifactId>lorne_exception</artifactId>
+            <groupId>com.lorne</groupId>
+            <artifactId>pay-weixin</artifactId>
             <version>1.0.0</version>
         </dependency>
 
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.34</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>1.5.7.RELEASE</version>
-        </dependency>
 
     </dependencies>
 
@@ -111,7 +94,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.5.7.RELEASE</version>
             </plugin>
         </plugins>
     </build>

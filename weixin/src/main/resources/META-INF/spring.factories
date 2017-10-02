@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.lorne.weixin.WeiXinConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.lorne.weixin.pay.WeiXinConfiguration
