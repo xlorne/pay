@@ -3,13 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lorne</groupId>
-    <artifactId>pay-weixin</artifactId>
+    <groupId>com.lorne.pay</groupId>
+    <artifactId>weixin</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
 
-    <name>pay-weixin</name>
-    <description>pay-weixin project for Spring Boot</description>
+    <name>weixin</name>
+    <description>weixin project for Spring Boot</description>
 
     <repositories>
         <repository>
@@ -24,15 +23,6 @@
             <url>file:/developer/idea/lorne/repository/</url>
         </repository>
     </distributionManagement>
-
-
-
-    <!--<parent>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
-        <!--<version>1.5.4.RELEASE</version>-->
-        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-    <!--</parent>-->
 
 
     <properties>
@@ -107,11 +97,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.5.7.RELEASE</version>
             </plugin>
         </plugins>
     </build>
