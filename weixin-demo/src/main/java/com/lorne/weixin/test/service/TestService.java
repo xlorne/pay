@@ -12,4 +12,7 @@ public interface TestService {
 
     Map<String, Object> createOrder(String openId) throws ServiceException;
 
+
+
+    Map<String,Object> microPay(String authCode ,String outTradeNo );
 }

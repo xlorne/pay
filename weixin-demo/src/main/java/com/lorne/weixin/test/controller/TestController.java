@@ -25,4 +25,17 @@ public class TestController {
         return testService.createOrder(openId);
     }
 
+
+    /**
+     * 刷卡支付
+     * @param
+     * @return
+     * @throws ServiceException
+     */
+    @RequestMapping("/microPay")
+    public Map<String,Object> microPay(@RequestParam("authCode") String authCode , @RequestParam("outTradeNo") String outTradeNo) throws ServiceException{
+        return testService.microPay(authCode , outTradeNo);
+    }
+
+
 }
