@@ -16,6 +16,7 @@ import java.util.Map;
  */
 public class WeixinApiUtils {
 
+
     public static Map<String, Object> createOrder(WxConfig config, String tradeNo, String subject,
                                                   String body, int price, String openid, String tradeType) {
         // app支付客户端ip

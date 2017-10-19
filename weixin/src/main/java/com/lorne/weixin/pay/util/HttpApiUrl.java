@@ -7,6 +7,13 @@ public class HttpApiUrl {
     // 1）统一下单
     public static String PAY_UNFIFIEDORDER = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 
+    // 1）提交刷卡支付
+    public static String PAY_MICROPAY = "https://api.mch.weixin.qq.com/pay/micropay";
+
+
+
+
+
     // 2）被扫支付查询API
     public static String PAY_QUERY_API = "https://api.mch.weixin.qq.com/pay/orderquery";
 
@@ -27,6 +34,9 @@ public class HttpApiUrl {
 
     // 8) 发送模板消息
     public static String SEND_MSG = "https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=%s";
+
+
+
 
 }
 

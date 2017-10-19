@@ -12,7 +12,6 @@ public class WeixinUtils {
 
 
 
-
     /**
      * 统一下单
      *
@@ -40,6 +39,43 @@ public class WeixinUtils {
         }
 
     }
+
+
+    /**
+     * 提交刷卡支付
+     * @param config
+     * @param authCode    支付码
+     * @param deviceInfo  设备号
+     * @param body        商品描述
+     * @param outTradeNo  商户订单号
+     * @param ip
+     * @param totalFee    订单金额
+     * @return
+     */
+    public  static Map<String , Object> payMicropay(WxConfig config ,String authCode , String deviceInfo , String body , String outTradeNo ,String  ip ,int  totalFee ){
+        MicroPayReqData mPayReqData = new MicroPayReqData(
+                config.getAppId() , config.getMchId() , authCode , config.getKey() , deviceInfo , body ,outTradeNo , totalFee ,ip
+        );
+        String postDataXML = mPayReqData.toXml();
+        LogUtils.logResult("请求统一下单参数", postDataXML);
+        try {
+            String res = HttpUtils.postXml(HttpApiUrl.PAY_MICROPAY,
+                    postDataXML);
+            LogUtils.logResult("响应统一下单参数", res);
+            Map<String, Object> map = XMLParser.getMapFromXML(res);
+            return map;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+
+
+
+
+
 
 
     public static Map<String, Object> refund(WxConfig config, String out_trade_no, String out_refund_no, int total_fee, int refund_fee) {
