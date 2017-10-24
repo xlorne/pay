@@ -61,11 +61,7 @@ public class AlipaySignature {
         return sortedParams;
     }
 
-    /**
-     * 
-     * @param sortedParams
-     * @return
-     */
+
     public static String getSignContent(Map<String, String> sortedParams) {
         StringBuffer content = new StringBuffer();
         List<String> keys = new ArrayList<String>(sortedParams.keySet());
@@ -82,15 +78,7 @@ public class AlipaySignature {
         return content.toString();
     }
 
-    /**
-     *  rsa内容签名
-     * 
-     * @param content
-     * @param privateKey
-     * @param charset
-     * @return
-     * @throws AlipayApiException
-     */
+    //rsa内容签名
     public static String rsaSign(String content, String privateKey, String charset,
                                  String signType) throws AlipayApiException {
 
@@ -107,15 +95,8 @@ public class AlipaySignature {
 
     }
 
-    /**
-     * sha256WithRsa 加签
-     * 
-     * @param content
-     * @param privateKey
-     * @param charset
-     * @return
-     * @throws AlipayApiException
-     */
+    // sha256WithRsa 加签
+
     public static String rsa256Sign(String content, String privateKey,
                                     String charset) throws AlipayApiException {
 
@@ -143,15 +124,8 @@ public class AlipaySignature {
 
     }
 
-    /**
-     * sha1WithRsa 加签
-     * 
-     * @param content
-     * @param privateKey
-     * @param charset
-     * @return
-     * @throws AlipayApiException
-     */
+    // sha1WithRsa 加签
+
     public static String rsaSign(String content, String privateKey,
                                  String charset) throws AlipayApiException {
         try {
@@ -405,7 +379,7 @@ public class AlipaySignature {
      *    <br>charset=UTF-8
      * <br>}
      * </p>
-     * @param params
+     * @param params    params
      * @param alipayPublicKey 支付宝公钥
      * @param cusPrivateKey   商户私钥
      * @param isCheckSign     是否验签
@@ -494,17 +468,17 @@ public class AlipaySignature {
      * @param isEncrypt       是否加密，true-加密  false-不加密
      * @param isSign          是否签名，true-签名  false-不签名
      * @return 加密、签名后xml内容字符串
-     * <p>
-     * 返回示例：
-     * <alipay>
-     *  <response>密文</response>
-     *  <encryption_type>RSA</encryption_type>
-     *  <sign>sign</sign>
-     *  <sign_type>RSA</sign_type>
-     * </alipay>
-     * </p>
      * @throws AlipayApiException 
      */
+
+//      返回示例：
+//            * <alipay>
+//            *  <response>密文</response>
+//            *  <encryption_type>RSA</encryption_type>
+//            *  <sign>sign</sign>
+//            *  <sign_type>RSA</sign_type>
+//            * </alipay>
+//            * </p>
     public static String encryptAndSign(String bizContent, String alipayPublicKey,
                                         String cusPrivateKey, String charset, boolean isEncrypt,
                                         boolean isSign,String signType) throws AlipayApiException {

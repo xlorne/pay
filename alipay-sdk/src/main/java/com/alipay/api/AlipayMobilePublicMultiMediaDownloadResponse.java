@@ -7,7 +7,7 @@ package com.alipay.api;
 import com.alipay.api.internal.mapping.ApiField;
 
 /**
- * ¶àÃ½ÌåÎÄ¼şÏÂÔØÏìÓ¦
+ * å¤šåª’ä½“æ–‡ä»¶ä¸‹è½½å“åº”
  * @author yikai.hu
  * @version $Id: AlipayMobilePublicMultiMediaDownloadResponse.java, v 0.1 Aug 15, 2014 10:19:31 AM yikai.hu Exp $
  */
