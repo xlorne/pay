@@ -3,37 +3,46 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lorne.pay</groupId>
-    <artifactId>weixin</artifactId>
-    <version>1.0.0</version>
+    <groupId>com.hou</groupId>
+    <artifactId>alipay</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-    <name>weixin</name>
-    <description>weixin project for Spring Boot</description>
+    <name>aliFacePay</name>
+    <description>aliFacePay project for Spring Boot</description>
 
-    <repositories>
-        <repository>
-            <id>lorne</id>
-            <url>https://1991wangliang.github.io/repository</url>
-        </repository>
-    </repositories>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.7.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
 
     <distributionManagement>
         <repository>
-            <id>lorne-repository</id>
-            <url>file:/developer/idea/lorne/repository/</url>
+            <id>hou</id>
+            <url>file:/D:/repository/maven/</url>
         </repository>
     </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>hou</id>
+            <url>https://raw.github.com/544845389/maven/hou/</url>
+        </repository>
+    </repositories>
 
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
         <maven.compile.source>1.7</maven.compile.source>
         <maven.compile.target>1.7</maven.compile.target>
-        <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
-
+        <java.version>1.8</java.version>
+        <org.springframework-version>4.3.7.RELEASE</org.springframework-version>
     </properties>
+
 
     <dependencies>
 
@@ -43,17 +52,16 @@
             <version>1.0.0</version>
         </dependency>
 
-
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.34</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework-version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>1.5.7.RELEASE</version>
+            <groupId>com.aliSDK</groupId>
+            <artifactId>aliSDK</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
@@ -92,7 +100,9 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
+
 
 </project>

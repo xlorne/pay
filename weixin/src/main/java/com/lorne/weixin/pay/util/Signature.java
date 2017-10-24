@@ -3,6 +3,7 @@ package com.lorne.weixin.pay.util;
 
 import com.lorne.core.framework.utils.encode.MD5Util;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,7 +40,11 @@ public class Signature {
 		}
 		String result = sb.toString();
 		result += "key=" + key;
-		result = MD5Util.md5(result).toUpperCase();
+		try {
+			result = MD5Util.md5(result.getBytes("utf-8")).toUpperCase();
+		} catch (UnsupportedEncodingException e) {
+			return null;
+		}
 		return result;
 	}
 
@@ -59,9 +64,11 @@ public class Signature {
 		}
 		String result = sb.toString();
 		result += "key=" + key;
-		// Util.log("Sign Before MD5:" + result);
-		result = MD5Util.md5(result).toUpperCase();
-		// Util.log("Sign Result:" + result);
+		try {
+			result = MD5Util.md5(result.getBytes("utf-8")).toUpperCase();
+		} catch (UnsupportedEncodingException e) {
+			return null;
+		}
 		return result;
 	}
 
