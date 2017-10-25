@@ -8,7 +8,38 @@ weixin          微信支付api封装
 weixin-demo     微信支付demo  
 
 
-侯
+alipay-sdk      阿里sdk
+
+alipay          阿里支付api封装
+
+alipay-demo     阿里支付demo
+
+
+```
+
+  <dependency>
+    <groupId>com.github.1991wangliang</groupId>
+    <artifactId>alipay-sdk</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+  
+  
+  <dependency>
+    <groupId>com.github.1991wangliang</groupId>
+    <artifactId>alipay-api</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+  
+  
+  <dependency>
+    <groupId>com.github.1991wangliang</groupId>
+    <artifactId>weixin-api</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+
+```
+
+
 
 
 

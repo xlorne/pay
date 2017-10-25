@@ -24,8 +24,7 @@ public class AliPayUtils {
      * @param title    订单标题
      * @param storeId  商户id
      * @param totalAmount 总金额
-     * @return
-     * @throws AlipayApiException
+     * @return  支付结果
      */
     public static String barcodePay(AliPayConfig payConfig, String orderNo , String  payCode , String title , String storeId , String totalAmount) {
         AlipayClient alipayClient = new DefaultAlipayClient(

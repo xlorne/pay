@@ -37,9 +37,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hou</groupId>
-            <artifactId>alipay</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>com.github.1991wangliang</groupId>
+            <artifactId>alipay-api</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
     </dependencies>
