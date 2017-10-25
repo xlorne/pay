@@ -16,10 +16,10 @@ public class Signature {
 	/**
 	 * 签名算法
 	 * 
-	 * @param o
-	 *            要参与签名的数据对象
+	 * @param o 	要参与签名的数据对象
+	 * @param key   key
 	 * @return 签名
-	 * @throws IllegalAccessException
+	 * @throws IllegalAccessException IllegalAccessException
 	 */
 	public static String getSign(Object o,String key) throws IllegalAccessException {
 		ArrayList<String> list = new ArrayList<String>();

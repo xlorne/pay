@@ -12,13 +12,13 @@ public class WeixinUtils {
 
 
 
-    /**
-     * 统一下单
-     *
-     * @param name      商品名称
-     * @param total_fee 价格（单位：分）
-     * @param ip        ip
-     */
+//    /**
+//     * 统一下单
+//     *
+//     * @param name      商品名称
+//     * @param total_fee 价格（单位：分）
+//     * @param ip        ip
+//     */
     public static Map<String, Object> payUnifiedorder(WxConfig config, String name, String detail, int total_fee, String ip, String out_trade_no, String openid, String trade_type) {
 
         UnifiedorderPayReqData unifiedorderPayReqData = new UnifiedorderPayReqData(config.getKey(),
@@ -43,14 +43,14 @@ public class WeixinUtils {
 
     /**
      * 提交刷卡支付
-     * @param config
+     * @param config       支付配置文件
      * @param authCode    支付码
      * @param deviceInfo  设备号
      * @param body        商品描述
      * @param outTradeNo  商户订单号
-     * @param ip
+     * @param ip            ip地址
      * @param totalFee    订单金额
-     * @return
+     * @return  支付结果
      */
     public  static Map<String , Object> payMicropay(WxConfig config ,String authCode , String deviceInfo , String body , String outTradeNo ,String  ip ,int  totalFee ){
         MicroPayReqData mPayReqData = new MicroPayReqData(

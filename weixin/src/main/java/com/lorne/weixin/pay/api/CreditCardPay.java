@@ -15,13 +15,13 @@ public class CreditCardPay {
 
     /**
      * 提交刷卡支付
-     * @param config
+     * @param config    支付配置文件
      * @param authCode    支付码
      * @param deviceInfo  终端设备号(商户自定义，如门店编号)
      * @param body         商品描述
      * @param outTradeNo  商户订单号
      * @param totalFee    订单金额
-     * @return
+     * @return  支付请求结果
      */
     public static  Map<String , Object>  payMicropay (WxConfig config ,String authCode ,String deviceInfo , String body , String outTradeNo , int totalFee ){
 

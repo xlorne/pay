@@ -11,21 +11,6 @@
     <name>weixin-demo</name>
     <description>weixin-demo project for Spring Boot</description>
 
-    <!--<repositories>-->
-    <!--<repository>-->
-    <!--<id>lorne</id>-->
-    <!--<url>https://1991wangliang.github.io/repository</url>-->
-    <!--</repository>-->
-    <!--</repositories>-->
-
-    <!--<distributionManagement>-->
-    <!--<repository>-->
-    <!--<id>lorne-repository</id>-->
-    <!--<url>file:/developer/idea/lorne/repository/</url>-->
-    <!--</repository>-->
-    <!--</distributionManagement>-->
-
-
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -48,8 +33,8 @@
 
 
         <dependency>
-            <groupId>com.lorne.pay</groupId>
-            <artifactId>weixin</artifactId>
+            <groupId>com.github.1991wangliang</groupId>
+            <artifactId>weixin-api</artifactId>
             <version>1.0.0</version>
         </dependency>
 

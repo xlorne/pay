@@ -18,16 +18,16 @@ public class ScanPayQueryReqData  extends MapXml {
     private String nonce_str = "";
     private String sign = "";
 
-    /**
-     * 请求支付查询服务
-     *
-     * @param transactionID 是微信系统为每一笔支付交易分配的订单号，通过这个订单号可以标识这笔交易，它由支付订单API支付成功时返回的数据里面获取到。
-     *                      建议优先使用
-     * @param outTradeNo    商户系统内部的订单号,transaction_id 、out_trade_no
-     *                      二选一，如果同时存在优先级：transaction_id>out_trade_no
-     * @return API返回的XML数据
-     * @throws Exception
-     */
+//    /**
+//     * 请求支付查询服务
+//     *
+//     * @param transactionID 是微信系统为每一笔支付交易分配的订单号，通过这个订单号可以标识这笔交易，它由支付订单API支付成功时返回的数据里面获取到。
+//     *                      建议优先使用
+//     * @param outTradeNo    商户系统内部的订单号,transaction_id 、out_trade_no
+//     *                      二选一，如果同时存在优先级：transaction_id>out_trade_no
+//     * @return API返回的XML数据
+//     * @throws Exception
+//     */
     public ScanPayQueryReqData(WxConfig config,String transactionID, String outTradeNo) {
 
         // --------------------------------------------------------------------

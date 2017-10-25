@@ -86,18 +86,18 @@ public class HttpsRequest {
         hasInit = true;
     }
 
-    /**
-     * 通过Https往API post xml数据
-     *
-     * @param url    API地址
-     * @param xmlObj 要提交的XML数据对象
-     * @return API回包的实际数据
-     * @throws IOException
-     * @throws KeyStoreException
-     * @throws UnrecoverableKeyException
-     * @throws NoSuchAlgorithmException
-     * @throws KeyManagementException
-     */
+//    /**
+//     * 通过Https往API post xml数据
+//     *
+//     * @param url    API地址
+//     * @param xmlObj 要提交的XML数据对象
+//     * @return API回包的实际数据
+//     * @throws IOException
+//     * @throws KeyStoreException
+//     * @throws UnrecoverableKeyException
+//     * @throws NoSuchAlgorithmException
+//     * @throws KeyManagementException
+//     */
 
     public String sendPost(String url, String xmlObj) throws IOException, KeyStoreException, UnrecoverableKeyException, NoSuchAlgorithmException, KeyManagementException {
 
