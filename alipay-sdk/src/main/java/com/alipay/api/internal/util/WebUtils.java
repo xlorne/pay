@@ -88,28 +88,28 @@ public abstract class WebUtils {
     private WebUtils() {
     }
 
-    /**
-     * 执行HTTP POST请求。
-     * 
-     * @param url 请求地址
-     * @param params 请求参数
-     * @return 响应字符串
-     * @throws IOException
-     */
+//    /**
+//     * 执行HTTP POST请求。
+//     *
+//     * @param url 请求地址
+//     * @param params 请求参数
+//     * @return 响应字符串
+//     * @throws IOException IO
+//     */
     public static String doPost(String url, Map<String, String> params, int connectTimeout,
                                 int readTimeout) throws IOException {
         return doPost(url, params, DEFAULT_CHARSET, connectTimeout, readTimeout);
     }
-
-    /**
-     * 执行HTTP POST请求。
-     * 
-     * @param url 请求地址
-     * @param params 请求参数
-     * @param charset 字符集，如UTF-8, GBK, GB2312
-     * @return 响应字符串
-     * @throws IOException
-     */
+//
+//    /**
+//     * 执行HTTP POST请求。
+//     *
+//     * @param url 请求地址
+//     * @param params 请求参数
+//     * @param charset 字符集，如UTF-8, GBK, GB2312
+//     * @return 响应字符串
+//     * @throws IOException IO
+//     */
     public static String doPost(String url, Map<String, String> params, String charset,
                                 int connectTimeout, int readTimeout) throws IOException {
         String ctype = "application/x-www-form-urlencoded;charset=" + charset;
@@ -121,15 +121,15 @@ public abstract class WebUtils {
         return doPost(url, ctype, content, connectTimeout, readTimeout);
     }
 
-    /**
-     * 执行HTTP POST请求。
-     * 
-     * @param url 请求地址
-     * @param ctype 请求类型
-     * @param content 请求字节数组
-     * @return 响应字符串
-     * @throws IOException
-     */
+//    /**
+//     * 执行HTTP POST请求。
+//     *
+//     * @param url 请求地址
+//     * @param ctype 请求类型
+//     * @param content 请求字节数组
+//     * @return 响应字符串
+//     * @throws IOException
+//     */
     public static String doPost(String url, String ctype, byte[] content, int connectTimeout,
                                 int readTimeout) throws IOException {
         HttpURLConnection conn = null;
@@ -168,15 +168,15 @@ public abstract class WebUtils {
         return rsp;
     }
 
-    /**
-     * 执行带文件上传的HTTP POST请求。
-     * 
-     * @param url 请求地址
-     * @param textParams 文本请求参数
-     * @param fileParams 文件请求参数
-     * @return 响应字符串
-     * @throws IOException
-     */
+//    /**
+//     * 执行带文件上传的HTTP POST请求。
+//     *
+//     * @param url 请求地址
+//     * @param textParams 文本请求参数
+//     * @param fileParams 文件请求参数
+//     * @return 响应字符串
+//     * @throws IOException
+//     */
     public static String doPost(String url, Map<String, String> params,
                                 Map<String, FileItem> fileParams, int connectTimeout,
                                 int readTimeout) throws IOException {
@@ -187,16 +187,16 @@ public abstract class WebUtils {
         }
     }
 
-    /**
-     * 执行带文件上传的HTTP POST请求。
-     * 
-     * @param url 请求地址
-     * @param textParams 文本请求参数
-     * @param fileParams 文件请求参数
-     * @param charset 字符集，如UTF-8, GBK, GB2312
-     * @return 响应字符串
-     * @throws IOException
-     */
+//    /**
+//     * 执行带文件上传的HTTP POST请求。
+//     *
+//     * @param url 请求地址
+//     * @param textParams 文本请求参数
+//     * @param fileParams 文件请求参数
+//     * @param charset 字符集，如UTF-8, GBK, GB2312
+//     * @return 响应字符串
+//     * @throws IOException
+//     */
     public static String doPost(String url, Map<String, String> params,
                                 Map<String, FileItem> fileParams, String charset,
                                 int connectTimeout, int readTimeout) throws IOException {
@@ -296,7 +296,7 @@ public abstract class WebUtils {
      * @param url 请求地址
      * @param params 请求参数
      * @return 响应字符串
-     * @throws IOException
+     * @throws IOException  IO
      */
     public static String doGet(String url, Map<String, String> params) throws IOException {
         return doGet(url, params, DEFAULT_CHARSET);
@@ -309,7 +309,7 @@ public abstract class WebUtils {
      * @param params 请求参数
      * @param charset 字符集，如UTF-8, GBK, GB2312
      * @return 响应字符串
-     * @throws IOException
+     * @throws IOException  UI
      */
     public static String doGet(String url, Map<String, String> params,
                                String charset) throws IOException {

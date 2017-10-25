@@ -52,21 +52,21 @@ public class RoyaltyDetailInfos extends AlipayObject {
 	@ApiField("serial_no")
 	private Long serialNo;
 
-	/**
-	 * 如果转入账号类型为userId，本参数为接受分账金额的支付宝账号对应的支付宝唯一用户号。以2088开头的纯16位数字。
-&#61548;	如果转入账号类型为bankIndex，本参数为28位的银行编号（商户和支付宝签约时确定）。
-如果转入账号类型为storeId，本参数为商户的门店ID。
-	 */
+//	/**
+//	 * 如果转入账号类型为userId，本参数为接受分账金额的支付宝账号对应的支付宝唯一用户号。以2088开头的纯16位数字。
+//&#61548;	如果转入账号类型为bankIndex，本参数为28位的银行编号（商户和支付宝签约时确定）。
+//如果转入账号类型为storeId，本参数为商户的门店ID。
+//	 */
 	@ApiField("trans_in")
 	private String transIn;
 
-	/**
-	 * 接受分账金额的账户类型：
-&#61548;	userId：支付宝账号对应的支付宝唯一用户号。
-&#61548;	bankIndex：分账到银行账户的银行编号。目前暂时只支持分账到一个银行编号。
-storeId：分账到门店对应的银行卡编号。
-默认值为userId。
-	 */
+//	/**
+//	 * 接受分账金额的账户类型：
+//&#61548;	userId：支付宝账号对应的支付宝唯一用户号。
+//&#61548;	bankIndex：分账到银行账户的银行编号。目前暂时只支持分账到一个银行编号。
+//storeId：分账到门店对应的银行卡编号。
+//默认值为userId。
+//	 */
 	@ApiField("trans_in_type")
 	private String transInType;
 

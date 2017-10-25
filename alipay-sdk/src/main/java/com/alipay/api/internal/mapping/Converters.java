@@ -63,15 +63,15 @@ public class Converters {
     private Converters() {
     }
 
-    /**
-     * 使用指定 的读取器去转换字符串为对象。
-     * 
-     * @param <T> 领域泛型
-     * @param clazz 领域类型
-     * @param reader 读取器
-     * @return 领域对象
-     * @throws ApiException
-     */
+//    /**
+//     * 使用指定 的读取器去转换字符串为对象。
+//     *
+//     * @param <T> 领域泛型
+//     * @param clazz 领域类型
+//     * @param reader 读取器
+//     * @return 领域对象
+//     * @throws ApiException
+//     */
     public static <T> T convert(Class<T> clazz, Reader reader) throws AlipayApiException {
         T rsp = null;
 
@@ -280,15 +280,15 @@ public class Converters {
         return rsp;
     }
 
-    /**
-     *  尝试获取属性
-     *  
-     *  不会抛出异常，不存在则返回null
-     * 
-     * @param clazz
-     * @param itemName
-     * @return
-     */
+//    /**
+//     *  尝试获取属性
+//     *
+//     *  不会抛出异常，不存在则返回null
+//     *
+//     * @param clazz
+//     * @param itemName
+//     * @return
+//     */
     private static Field tryGetFieldWithoutExp(Class<?> clazz, String itemName) {
 
         try {
@@ -300,13 +300,13 @@ public class Converters {
         }
     }
 
-    /**
-     *   获取属性设置属性
-     * 
-     * @param clazz
-     * @param field
-     * @return
-     */
+//    /**
+//     *   获取属性设置属性
+//     *
+//     * @param clazz
+//     * @param field
+//     * @return
+//     */
     private static <T> Method tryGetSetMethod(Class<T> clazz, Field field, String methodName) {
 
         try {

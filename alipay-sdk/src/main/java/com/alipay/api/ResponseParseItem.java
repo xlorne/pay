@@ -25,11 +25,11 @@ public class ResponseParseItem implements Serializable {
     /** 加密内容 */
     private String            encryptContent   = null;
 
-    /**
-     * @param startIndex
-     * @param endIndex
-     * @param encryptContent
-     */
+//    /**
+//     * @param startIndex
+//     * @param endIndex
+//     * @param encryptContent
+//     */
     public ResponseParseItem(int startIndex, int endIndex, String encryptContent) {
         super();
         this.startIndex = startIndex;

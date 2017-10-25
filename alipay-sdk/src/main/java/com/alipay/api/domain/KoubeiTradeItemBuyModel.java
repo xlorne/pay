@@ -38,9 +38,9 @@ public class KoubeiTradeItemBuyModel extends AlipayObject {
 	@ApiField("current_price")
 	private String currentPrice;
 
-	/**
-	 * 额外描述信息，比如预定时间信息，需要以“字段1：描述1；字段2：描述2；....“方式传入。标点符号限制集如下,不能传下列标点之外的标点符号：..！.{},:()"[]，。!！,/>"{},:"，?？。!！\[\]]=+_@#$%*
-	 */
+//	/**
+//	 * 额外描述信息，比如预定时间信息，需要以“字段1：描述1；字段2：描述2；....“方式传入。标点符号限制集如下,不能传下列标点之外的标点符号：..！.{},:()"[]，。!！,/>"{},:"，?？。!！\[\]]=+_@#$%*
+//	 */
 	@ApiField("ext_info")
 	private String extInfo;
 
@@ -88,9 +88,9 @@ public class KoubeiTradeItemBuyModel extends AlipayObject {
 	@ApiField("reserve_start_time")
 	private String reserveStartTime;
 
-	/**
-	 * 店铺ID，用于后续统计商家各门店的售卖，需传入口碑店铺id，取值规则见FAQ常见问题。https://doc.open.alipay.com/docs/doc.htm?&docType=1&articleId=105746
-	 */
+//	/**
+//	 * 店铺ID，用于后续统计商家各门店的售卖，需传入口碑店铺id，取值规则见FAQ常见问题。https://doc.open.alipay.com/docs/doc.htm?&docType=1&articleId=105746
+//	 */
 	@ApiField("shop_id")
 	private String shopId;
 

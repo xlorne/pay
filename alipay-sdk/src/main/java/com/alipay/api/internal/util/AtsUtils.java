@@ -41,7 +41,7 @@ public abstract class AtsUtils {
      * @param gzip 需要解压的gzip文件
      * @param toDir 需要解压到的目录
      * @return 解压后的文件
-     * @throws IOException
+     * @throws IOException	IO异常
      */
 	public static File ungzip(File gzip, File toDir) throws IOException {
 		toDir.mkdirs();
@@ -68,6 +68,7 @@ public abstract class AtsUtils {
      * @param zip 需要解压的zip文件
      * @param toDir 需要解压到的目录
      * @return 解压后的文件列表（不包含文件夹）
+	 * @throws IOException io异常
      */
 	public static List<File> unzip(File zip, File toDir) throws IOException {
 		ZipFile zf = null;
@@ -110,6 +111,7 @@ public abstract class AtsUtils {
      * @param url 需要下载的URL
      * @param toDir 需要下载到的目录
      * @return 下载后的文件
+	 * @throws AlipayApiException 支付异常
      */
 	public static File download(String url, File toDir) throws AlipayApiException {
 		toDir.mkdirs();
@@ -145,6 +147,7 @@ public abstract class AtsUtils {
      * @param file 需要检验的文件
      * @param checkCode 已知的md5sum检验码
      * @return true/false
+	 * @throws IOException io
      */
 	public static boolean checkMd5sum(File file, String checkCode) throws IOException {
 		DigestInputStream dInput = null;
@@ -161,9 +164,9 @@ public abstract class AtsUtils {
 		}
 	}
 
-    /**
-     * 把字节数组转换成十六进制的字符串。
-     */
+//    /**
+//     * 把字节数组转换成十六进制的字符串。
+//     */
 	private static String bytes2hex(byte[] bytes) {
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < bytes.length; i++) {

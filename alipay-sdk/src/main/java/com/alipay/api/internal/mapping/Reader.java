@@ -34,7 +34,7 @@ public interface Reader {
      * @param name 映射名称
      * @param type 映射类型
      * @return 映射类型的实例
-     * @throws TopException
+     * @throws AlipayApiException   支付异常
      */
 	public Object getObject(Object name, Class<?> type) throws AlipayApiException;
 
@@ -45,7 +45,7 @@ public interface Reader {
      * @param itemName 映射名称
      * @param subType 嵌套映射类型
      * @return 嵌套映射类型实例列表
-     * @throws TopException
+     * @throws AlipayApiException 支付异常
      */
 	public List<?> getListObjects(Object listName, Object itemName, Class<?> subType)
                                                                                      throws AlipayApiException;

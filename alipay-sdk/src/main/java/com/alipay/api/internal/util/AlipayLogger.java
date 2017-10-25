@@ -55,9 +55,9 @@ public class AlipayLogger {
         AlipayLogger.ip = ip;
     }
 
-    /**
-     * 通讯错误日志
-     */
+//    /**
+//     * 通讯错误日志
+//     */
     public static void logCommError(Exception e, HttpURLConnection conn, String appKey,
                                     String method, byte[] content) {
         if (!needEnableLogger) {
@@ -72,9 +72,9 @@ public class AlipayLogger {
         }
     }
 
-    /**
-     * 通讯错误日志
-     */
+//    /**
+//     * 通讯错误日志
+//     */
     public static void logCommError(Exception e, String url, String appKey, String method,
                                     byte[] content) {
         if (!needEnableLogger) {
@@ -89,9 +89,9 @@ public class AlipayLogger {
         }
     }
 
-    /**
-     * 通讯错误日志
-     */
+//    /**
+//     * 通讯错误日志
+//     */
     public static void logCommError(Exception e, HttpURLConnection conn, String appKey,
                                     String method, Map<String, String> params) {
         if (!needEnableLogger) {
@@ -108,27 +108,27 @@ public class AlipayLogger {
         _logCommError(e, null, url, appKey, method, params);
     }
 
-    /**
-     * 通讯错误日志
-     */
+//    /**
+//     * 通讯错误日志
+//     */
     private static void logCommError(Exception e, HttpURLConnection conn, String appKey,
                                      String method, String content) {
         Map<String, String> params = parseParam(content);
         _logCommError(e, conn, null, appKey, method, params);
     }
 
-    /**
-     * 通讯错误日志
-     */
+//    /**
+//     * 通讯错误日志
+//     */
     private static void logCommError(Exception e, String url, String appKey, String method,
                                      String content) {
         Map<String, String> params = parseParam(content);
         _logCommError(e, null, url, appKey, method, params);
     }
 
-    /**
-     * 通讯错误日志
-     */
+//    /**
+//     * 通讯错误日志
+//     */
     private static void _logCommError(Exception e, HttpURLConnection conn, String url,
                                       String appKey, String method, Map<String, String> params) {
         DateFormat df = new SimpleDateFormat(AlipayConstants.DATE_TIME_FORMAT);
@@ -183,10 +183,10 @@ public class AlipayLogger {
         }
         return params;
     }
-
-    /**
-     * 业务/系统错误日志
-     */
+//
+//    /**
+//     * 业务/系统错误日志
+//     */
     public static void logBizDebug(String rsp) {
         if (!needEnableLogger) {
             return;
@@ -203,9 +203,9 @@ public class AlipayLogger {
         }
     }
 
-    /**
-     * 业务/系统错误日志
-     */
+//    /**
+//     * 业务/系统错误日志
+//     */
     public static void logBizError(String rsp) {
         if (!needEnableLogger) {
             return;
@@ -219,9 +219,9 @@ public class AlipayLogger {
         blog.error(sb.toString());
     }
 
-    /**
-     * 业务/系统错误日志
-     */
+//    /**
+//     * 业务/系统错误日志
+//     */
     public static void logBizError(Throwable t) {
         if (!needEnableLogger) {
             return;
@@ -229,9 +229,9 @@ public class AlipayLogger {
         blog.error(t);
     }
 
-    /**
-     * 发生特别错误时记录完整错误现场
-     */
+//    /**
+//     * 发生特别错误时记录完整错误现场
+//     */
     public static void logErrorScene(Map<String, Object> rt, AlipayResponse tRsp,
                                      String appSecret) {
         if (!needEnableLogger) {
@@ -283,11 +283,11 @@ public class AlipayLogger {
         return blog.isDebugEnabled();
     }
 
-    /**
-     * 开启DEBUG级别日志（仅针对JDK14LOGGER，LOG4J请自行修改配置文件）
-     * 
-     * @param isEnabled
-     */
+//    /**
+//     * 开启DEBUG级别日志（仅针对JDK14LOGGER，LOG4J请自行修改配置文件）
+//     *
+//     * @param isEnabled
+//     */
     public static void setJDKDebugEnabled(Boolean isEnabled) {
         //如果使用JDK14LOGGER，将业务日志级别设为DEBUG(FINE)
         if (blog instanceof Jdk14Logger) {

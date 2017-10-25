@@ -294,9 +294,9 @@ public class ConsumeRecordAOPModel extends AlipayObject {
 	@ApiField("pay_channel")
 	private String payChannel;
 
-	/**
-	 * 代付人&亲密付人姓名
-	 */
+//	/**
+//	 * 代付人&亲密付人姓名
+//	 */
 	@ApiField("peerpayer_real_name")
 	private String peerpayerRealName;
 

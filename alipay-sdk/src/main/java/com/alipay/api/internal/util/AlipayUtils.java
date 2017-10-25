@@ -116,23 +116,23 @@ public abstract class AlipayUtils {
         }
     }
 
-    /**
-     * 把JSON字符串解释为对象结构。
-     * 
-     * @param <T> API响应类型
-     * @param json JSON字符串
-     * @param clazz API响应类
-     * @return API响应对象
-     */
+//    /**
+//     * 把JSON字符串解释为对象结构。
+//     *
+//     * @param <T> API响应类型
+//     * @param json JSON字符串
+//     * @param clazz API响应类
+//     * @return API响应对象
+//     */
     public static <T extends AlipayResponse> T parseResponse(String json, Class<T> clazz)
                                                                                          throws AlipayApiException {
         ObjectJsonParser<T> parser = new ObjectJsonParser<T>(clazz);
         return parser.parse(json);
     }
 
-    /**
-     * 获取本机的网络IP
-     */
+//    /**
+//     * 获取本机的网络IP
+//     */
     public static String getLocalNetWorkIp() {
         if (localIp != null) {
             return localIp;

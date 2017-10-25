@@ -13,9 +13,9 @@ public class AlipayOfflineProviderShopactionRecordModel extends AlipayObject {
 
 	private static final long serialVersionUID = 4516145699371181348L;
 
-	/**
-	 * 详情设置会根据action_type字段类型不同而格式不同，请详细查看开放平台文案，会详细说明如果设置，整体是json结构。参考文档：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.u6pJ7Q&treeId=193&articleId=105281&docType=1#s1
-	 */
+//	/**
+//	 * 详情设置会根据action_type字段类型不同而格式不同，请详细查看开放平台文案，会详细说明如果设置，整体是json结构。参考文档：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.u6pJ7Q&treeId=193&articleId=105281&docType=1#s1
+//	 */
 	@ApiField("action_detail")
 	private String actionDetail;
 
@@ -78,9 +78,9 @@ public class AlipayOfflineProviderShopactionRecordModel extends AlipayObject {
 	@ApiField("source")
 	private String source;
 
-	/**
-	 * 支付宝账户ID，这里传入门店的商户id。如果获取不到支付宝账户ID，一定不能设置。如何获取支付宝账户ID,获取用户uid的接口调用文档：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.jokL1V&treeId=193&articleId=105656&docType=1#s3
-	 */
+//	/**
+//	 * 支付宝账户ID，这里传入门店的商户id。如果获取不到支付宝账户ID，一定不能设置。如何获取支付宝账户ID,获取用户uid的接口调用文档：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.jokL1V&treeId=193&articleId=105656&docType=1#s3
+//	 */
 	@ApiField("user_id")
 	private String userId;
 

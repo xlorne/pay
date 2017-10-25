@@ -60,7 +60,7 @@ public final class XmlUtils {
      * Creates a new document instance.
      *
      * @return a new document instance
-     * @throws ApiException problem creating a new document
+     * @throws AlipayApiException problem creating a new document
      */
     public static Document newDocument() throws AlipayApiException {
         Document doc = null;
@@ -79,7 +79,7 @@ public final class XmlUtils {
      *
      * @param file the XML file instance
      * @return the document instance representing the entire XML document
-     * @throws ApiException problem parsing the XML file
+     * @throws AlipayApiException problem parsing the XML file
      */
     public static Document getDocument(File file) throws AlipayApiException {
         InputStream in = getInputStream(file);
@@ -91,7 +91,7 @@ public final class XmlUtils {
      *
      * @param in the XML file input stream
      * @return the document instance representing the entire XML document
-     * @throws ApiException problem parsing the XML input stream
+     * @throws AlipayApiException problem parsing the XML input stream
      */
     public static Document getDocument(InputStream in) throws AlipayApiException {
         Document doc = null;
@@ -124,7 +124,7 @@ public final class XmlUtils {
      *
      * @param tagName the name of the root element
      * @return a new element instance
-     * @throws ApiException problem generating a new document
+     * @throws AlipayApiException problem generating a new document
      */
     public static Element createRootElement(String tagName) throws AlipayApiException {
         Document doc = newDocument();
@@ -138,7 +138,7 @@ public final class XmlUtils {
      *
      * @param in the XML file input stream
      * @return the root element of parsed document
-     * @throws ApiException problem parsing the XML file input stream
+     * @throws AlipayApiException problem parsing the XML file input stream
      */
     public static Element getRootElementFromStream(InputStream in)
  throws AlipayApiException {
@@ -148,9 +148,9 @@ public final class XmlUtils {
     /**
      * Gets the root element from given XML file.
      *
-     * @param fileName the name of the XML file
+     * @param file the name of the XML file
      * @return the root element of parsed document
-     * @throws ApiException problem parsing the XML file
+     * @throws AlipayApiException problem parsing the XML file
      */
     public static Element getRootElementFromFile(File file)
  throws AlipayApiException {
@@ -187,13 +187,13 @@ public final class XmlUtils {
         }
         return result;
     }
-	
+
     /**
      * Gets the root element from the given XML payload.
      *
      * @param payload the XML payload representing the XML file.
      * @return the root element of parsed document
-     * @throws ApiException problem parsing the XML payload
+     * @throws AlipayApiException problem parsing the XML payload
      */
     public static Element getRootElementFromString(String payload)
  throws AlipayApiException {
@@ -319,8 +319,8 @@ public final class XmlUtils {
 
 	/**
 	 * Gets the text value of current element.
-	 * 
-	 * @param parent the current element
+	 *
+	 * @param element the current element
 	 * @return text value of the element, NULL if element not exists
 	 */
 	public static String getElementValue(Element element) {
@@ -403,7 +403,7 @@ public final class XmlUtils {
      *
      * @param node the node/element instance to convert
      * @return the XML payload representing the node/element
-     * @throws ApiException problem converting XML to string
+     * @throws AlipayApiException problem converting XML to string
      */
     public static String childNodeToString(Node node) throws AlipayApiException {
         String payload = null;
@@ -431,7 +431,7 @@ public final class XmlUtils {
      *
      * @param node the node/document/element instance to convert
      * @return the XML payload representing the node/document/element
-     * @throws ApiException problem converting XML to string
+     * @throws AlipayApiException problem converting XML to string
      */
     public static String nodeToString(Node node) throws AlipayApiException {
         String payload = null;
@@ -460,7 +460,7 @@ public final class XmlUtils {
      *
      * @param file the XML file instance
      * @return the XML payload representing the XML file
-     * @throws ApiException problem transforming XML to string
+     * @throws AlipayApiException problem transforming XML to string
      */
     public static String xmlToString(File file) throws AlipayApiException {
         Element root = getRootElementFromFile(file);
@@ -472,7 +472,7 @@ public final class XmlUtils {
      *
      * @param in the XML file input stream
      * @return the payload represents the XML file
-     * @throws ApiException problem transforming XML to string
+     * @throws AlipayApiException problem transforming XML to string
      */
     public static String xmlToString(InputStream in) throws AlipayApiException {
         Element root = getRootElementFromStream(in);
@@ -484,7 +484,7 @@ public final class XmlUtils {
      *
      * @param doc the XML node/document/element to save
      * @param file the XML file to save
-     * @throws ApiException problem persisting XML file
+     * @throws AlipayApiException problem persisting XML file
      */
     public static void saveToXml(Node doc, File file) throws AlipayApiException {
         OutputStream out = null;
@@ -519,7 +519,7 @@ public final class XmlUtils {
      *
      * @param doc the XML document to validate
      * @param schemaFile the XML schema file instance
-     * @throws ApiException error occurs if the schema file not exists
+     * @throws AlipayApiException error occurs if the schema file not exists
      */
     public static void validateXml(Node doc, File schemaFile)
  throws AlipayApiException {
@@ -531,7 +531,7 @@ public final class XmlUtils {
      *
      * @param doc the XML document to validate
      * @param schemaStream the XML schema file input stream
-     * @throws ApiException error occurs if validation fail
+     * @throws AlipayApiException error occurs if validation fail
      */
     public static void validateXml(Node doc, InputStream schemaStream)
  throws AlipayApiException {
@@ -563,7 +563,7 @@ public final class XmlUtils {
      * @param payload the XML payload to convert
      * @param xsltFile the XML stylesheet file
      * @return the transformed XHTML/HTML format string
-     * @throws ApiException problem converting XML to HTML
+     * @throws AlipayApiException problem converting XML to HTML
      */
     public static String xmlToHtml(String payload, File xsltFile)
  throws AlipayApiException {
@@ -612,7 +612,7 @@ public final class XmlUtils {
      *
      * @param payload the XML payload to encode
      * @return the encoded XML payload
-     * @throws ApiException problem encoding the XML payload
+     * @throws AlipayApiException problem encoding the XML payload
      */
     public static String encodeXml(String payload) throws AlipayApiException {
         Element root = createRootElement(XMLConstants.XML_NS_PREFIX);

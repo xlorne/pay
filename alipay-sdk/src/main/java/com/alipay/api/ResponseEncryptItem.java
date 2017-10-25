@@ -27,10 +27,10 @@ public class ResponseEncryptItem implements Serializable {
      */
     private String            realContent;
 
-    /**
-     * @param respContent
-     * @param realContent
-     */
+//    /**
+//     * @param respContent
+//     * @param realContent
+//     */
     public ResponseEncryptItem(String respContent, String realContent) {
         super();
         this.respContent = respContent;

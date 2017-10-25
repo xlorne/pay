@@ -35,9 +35,9 @@ public abstract class StringUtils {
 		return true;
 	}
 
-    /**
-     * 检查对象是否为数字型字符串,包含负数开头的。
-     */
+//    /**
+//     * 检查对象是否为数字型字符串,包含负数开头的。
+//     */
 	public static boolean isNumeric(Object obj) {
 		if (obj == null) {
 			return false;
@@ -59,9 +59,9 @@ public abstract class StringUtils {
 		return true;
 	}
 
-    /**
-     * 检查指定的字符串列表是否不为空。
-     */
+//    /**
+//     * 检查指定的字符串列表是否不为空。
+//     */
 	public static boolean areNotEmpty(String... values) {
 		boolean result = true;
 		if (values == null || values.length == 0) {
@@ -74,9 +74,9 @@ public abstract class StringUtils {
 		return result;
 	}
 
-    /**
-     * 把通用字符编码的字符串转化为汉字编码。
-     */
+//    /**
+//     * 把通用字符编码的字符串转化为汉字编码。
+//     */
 	public static String unicodeToChinese(String unicode) {
 		StringBuilder out = new StringBuilder();
 		if (!isEmpty(unicode)) {
@@ -87,9 +87,9 @@ public abstract class StringUtils {
 		return out.toString();
 	}
 
-    /**
-     * 过滤不可见字符
-     */
+//    /**
+//     * 过滤不可见字符
+//     */
 	public static String stripNonValidXMLCharacters(String input) {
 		if (input == null || ("".equals(input)))
 			return "";

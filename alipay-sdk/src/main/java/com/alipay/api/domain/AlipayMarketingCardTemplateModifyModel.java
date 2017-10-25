@@ -23,11 +23,11 @@ public class AlipayMarketingCardTemplateModifyModel extends AlipayObject {
 	@ApiField("biz_no_prefix")
 	private String bizNoPrefix;
 
-	/**
-	 * 卡行动点配置；
-行动点，即用户可点击跳转的区块，类似按钮控件的交互；
-单张卡最多定制4个行动点。
-	 */
+//	/**
+//	 * 卡行动点配置；
+//行动点，即用户可点击跳转的区块，类似按钮控件的交互；
+//单张卡最多定制4个行动点。
+//	 */
 	@ApiListField("card_action_list")
 	@ApiField("template_action_info_d_t_o")
 	private List<TemplateActionInfoDTO> cardActionList;

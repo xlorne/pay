@@ -49,11 +49,11 @@ public class AntMerchantExpandContractFacetofaceSignModel extends AlipayObject {
 	@ApiField("contact_name")
 	private String contactName;
 
-	/**
-	 * 所属MCCCode，详情可参考
-<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.59bgD2&treeId=222&articleId=105364&docType=1#s1
-">商家经营类目</a> 中的“经营类目编码”
-	 */
+//	/**
+//	 * 所属MCCCode，详情可参考
+//<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.59bgD2&treeId=222&articleId=105364&docType=1#s1
+//">商家经营类目</a> 中的“经营类目编码”
+//	 */
 	@ApiField("mcc_code")
 	private String mccCode;
 
@@ -75,12 +75,12 @@ public class AntMerchantExpandContractFacetofaceSignModel extends AlipayObject {
 	@ApiField("shop_sign_board_pic")
 	private String shopSignBoardPic;
 
-	/**
-	 * 企业特殊资质图片，可参考
-<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.59bgD2&treeId=222&articleId=105364&docType=1#s1
-">商家经营类目</a> 中的“需要的特殊资质证书” 
-通过ant.merchant.expand.image.upload接口上传企业特殊资质图片
-	 */
+//	/**
+//	 * 企业特殊资质图片，可参考
+//<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.59bgD2&treeId=222&articleId=105364&docType=1#s1
+//">商家经营类目</a> 中的“需要的特殊资质证书”
+//通过ant.merchant.expand.image.upload接口上传企业特殊资质图片
+//	 */
 	@ApiField("special_license_pic")
 	private String specialLicensePic;
 

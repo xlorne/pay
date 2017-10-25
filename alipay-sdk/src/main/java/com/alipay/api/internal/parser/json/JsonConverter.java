@@ -56,7 +56,7 @@ public class JsonConverter implements Converter {
      * @param json JSON格式的数据
      * @param clazz 泛型领域类型
      * @return 领域对象
-     * @throws TopException
+     * @throws AlipayApiException 支付异常
      */
     public <T> T fromJson(final Map<?, ?> json, Class<T> clazz) throws AlipayApiException {
         return Converters.convert(clazz, new Reader() {

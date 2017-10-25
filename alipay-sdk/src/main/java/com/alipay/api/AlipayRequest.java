@@ -87,28 +87,28 @@ public interface AlipayRequest<T extends AlipayResponse> {
     /**
      * 返回通知地址
      * 
-     * @return
+     * @return  返回通知地址
      */
     public String getNotifyUrl();
 
     /**
      *  设置通知地址
      * 
-     * @param notifyUrl
+     * @param notifyUrl 返回通知地址
      */
     public void setNotifyUrl(String notifyUrl);
 
     /**
      * 返回回跳地址
      * 
-     * @return
+     * @return  返回通知地址
      */
     public String getReturnUrl();
 
     /**
      *  设置回跳地址
      * 
-     * @param notifyUrl
+     * @param returnUrl 通知地址
      */
     public void setReturnUrl(String returnUrl);
 
@@ -122,14 +122,14 @@ public interface AlipayRequest<T extends AlipayResponse> {
     /**
      * 判断是否需要加密
      * 
-     * @return
+     * @return  判断是否需要加密
      */
     public boolean isNeedEncrypt();
 
     /**
      * 设置请求是否需要加密
      * 
-     * @param needEncrypt
+     * @param needEncrypt   设置请求是否需要加密
      */
     public void setNeedEncrypt(boolean needEncrypt);
 
@@ -138,7 +138,7 @@ public interface AlipayRequest<T extends AlipayResponse> {
     /**
      * 设置业务实体，如需使用此方法，请勿直接设置biz_content
      * 
-     * @param bizModel
+     * @param bizModel  设置业务实体
      */
     public void setBizModel(AlipayObject bizModel);
 

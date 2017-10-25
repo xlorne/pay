@@ -33,7 +33,7 @@ public abstract class AlipayResponse implements Serializable {
     /**
      * 废弃方法，请使用getCode替换
      * 
-     * @return
+     * @return  请使用getCode替换
      */
     @Deprecated
     public String getErrorCode() {
@@ -43,7 +43,7 @@ public abstract class AlipayResponse implements Serializable {
     /**
      * 废弃方法，请使用setCode替换
      * 
-     * @param errorCode
+     * @param errorCode 请使用setCode替换
      */
     @Deprecated
     public void setErrorCode(String errorCode) {

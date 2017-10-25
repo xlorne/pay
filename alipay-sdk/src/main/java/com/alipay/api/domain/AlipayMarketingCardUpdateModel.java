@@ -29,12 +29,12 @@ public class AlipayMarketingCardUpdateModel extends AlipayObject {
 	@ApiField("ext_info")
 	private String extInfo;
 
-	/**
-	 * 注意：此字段已废弃，卡面样式以模板中的定义为准。
-会员卡卡面展示样式
-参考：展示位置详情参考"商户会员卡->快速接入文档->第四步" 
-备注：mcard_style_info与card_info下的template_id不能同时更新
-	 */
+//	/**
+//	 * 注意：此字段已废弃，卡面样式以模板中的定义为准。
+//会员卡卡面展示样式
+//参考：展示位置详情参考"商户会员卡->快速接入文档->第四步"
+//备注：mcard_style_info与card_info下的template_id不能同时更新
+//	 */
 	@ApiField("mcard_style_info")
 	private McardStylInfo mcardStyleInfo;
 

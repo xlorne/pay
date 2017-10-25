@@ -40,12 +40,12 @@ public class BaseInfo extends AlipayObject {
 	 */
 	@ApiField("logo_pic")
 	private String logoPic;
-
-	/**
-	 * 所属MCCCode，详情可参考
-<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.59bgD2&treeId=222&articleId=105364&docType=1#s1
-">商家经营类目</a>
-	 */
+//
+//	/**
+//	 * 所属MCCCode，详情可参考
+//<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.59bgD2&treeId=222&articleId=105364&docType=1#s1
+//">商家经营类目</a>
+//	 */
 	@ApiField("mcc_code")
 	private String mccCode;
 
@@ -55,11 +55,11 @@ public class BaseInfo extends AlipayObject {
 	@ApiField("short_name")
 	private String shortName;
 
-	/**
-	 * 企业特殊资质图片，可参考
-<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.59bgD2&treeId=222&articleId=105364&docType=1#s1
-">商家经营类目</a>
-	 */
+//	/**
+//	 * 企业特殊资质图片，可参考
+//<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.59bgD2&treeId=222&articleId=105364&docType=1#s1
+//">商家经营类目</a>
+//	 */
 	@ApiListField("special_license_pic")
 	@ApiField("string")
 	private List<String> specialLicensePic;

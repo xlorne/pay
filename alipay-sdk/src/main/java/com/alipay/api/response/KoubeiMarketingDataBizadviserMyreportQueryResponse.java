@@ -14,9 +14,9 @@ public class KoubeiMarketingDataBizadviserMyreportQueryResponse extends AlipayRe
 
 	private static final long serialVersionUID = 7347855418675634318L;
 
-	/** 
-	 * 不同uniq_key 返回不同参数，详细请看：https://doc.open.alipay.com/docs/doc.htm?spm=0.0.0.0.1Zq3by&docType=1&articleId=107061&previewCode=F30AA2D06B7CC0817AC7221A8CE288A4
-	 */
+//	/**
+//	 * 不同uniq_key 返回不同参数，详细请看：https://doc.open.alipay.com/docs/doc.htm?spm=0.0.0.0.1Zq3by&docType=1&articleId=107061&previewCode=F30AA2D06B7CC0817AC7221A8CE288A4
+//	 */
 	@ApiField("result")
 	private String result;
 

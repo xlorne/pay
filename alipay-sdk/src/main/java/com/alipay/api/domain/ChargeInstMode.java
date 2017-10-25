@@ -3,8 +3,8 @@ package com.alipay.api.domain;
 import com.alipay.api.AlipayObject;
 import com.alipay.api.internal.mapping.ApiField;
 
+//出账机构接口输出参数列表 ChargeInstResult{ List<ChargeInstMode>}对象
 /**
- * 出账机构接口输出参数列表 ChargeInstResult{ List<ChargeInstMode>}对象
  *
  * @author auto create
  * @since 1.0, 2016-10-26 17:43:38

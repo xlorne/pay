@@ -30,16 +30,16 @@ public class AlipayEncrypt {
 
     private static final byte[] AES_IV          = initIv(AES_CBC_PCK_ALG);
 
-    /**
-     *   加密
-     * 
-     * @param content
-     * @param encryptType
-     * @param encryptKey
-     * @param charset
-     * @return
-     * @throws AlipayApiException
-     */
+//    /**
+//     *   加密
+//     *
+//     * @param content
+//     * @param encryptType
+//     * @param encryptKey
+//     * @param charset
+//     * @return
+//     * @throws AlipayApiException
+//     */
     public static String encryptContent(String content, String encryptType, String encryptKey,
                                         String charset) throws AlipayApiException {
 
@@ -54,16 +54,16 @@ public class AlipayEncrypt {
 
     }
 
-    /**
-     *  解密
-     * 
-     * @param content
-     * @param encryptType
-     * @param encryptKey
-     * @param charset
-     * @return
-     * @throws AlipayApiException
-     */
+//    /**
+//     *  解密
+//     *
+//     * @param content
+//     * @param encryptType
+//     * @param encryptKey
+//     * @param charset
+//     * @return
+//     * @throws AlipayApiException
+//     */
     public static String decryptContent(String content, String encryptType, String encryptKey,
                                         String charset) throws AlipayApiException {
 
@@ -78,15 +78,15 @@ public class AlipayEncrypt {
 
     }
 
-    /**
-     * AES加密
-     * 
-     * @param content
-     * @param aesKey
-     * @param charset
-     * @return
-     * @throws AlipayApiException
-     */
+//    /**
+//     * AES加密
+//     *
+//     * @param content
+//     * @param aesKey
+//     * @param charset
+//     * @return
+//     * @throws AlipayApiException
+//     */
     private static String aesEncrypt(String content, String aesKey, String charset)
                                                                                    throws AlipayApiException {
 
@@ -106,15 +106,15 @@ public class AlipayEncrypt {
 
     }
 
-    /**
-     * AES解密
-     * 
-     * @param content
-     * @param key
-     * @param charset
-     * @return
-     * @throws AlipayApiException
-     */
+//    /**
+//     * AES解密
+//     *
+//     * @param content
+//     * @param key
+//     * @param charset
+//     * @return
+//     * @throws AlipayApiException
+//     */
     private static String aesDecrypt(String content, String key, String charset)
                                                                                 throws AlipayApiException {
         try {
@@ -131,13 +131,13 @@ public class AlipayEncrypt {
         }
     }
 
-    /**
-     * 初始向量的方法, 全部为0. 这里的写法适合于其它算法,针对AES算法的话,IV值一定是128位的(16字节).
-     *
-     * @param fullAlg
-     * @return
-     * @throws GeneralSecurityException
-     */
+//    /**
+//     * 初始向量的方法, 全部为0. 这里的写法适合于其它算法,针对AES算法的话,IV值一定是128位的(16字节).
+//     *
+//     * @param fullAlg
+//     * @return
+//     * @throws GeneralSecurityException
+//     */
     private static byte[] initIv(String fullAlg) {
 
         try {

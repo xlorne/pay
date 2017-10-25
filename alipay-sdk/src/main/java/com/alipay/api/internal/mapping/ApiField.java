@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
 @Target(value = { ElementType.FIELD })
 public @interface ApiField {
 
-    /** JSON属性映射名称 **/
+//    /** JSON属性映射名称 **/
 	public String value() default "";
 
 }

@@ -19,9 +19,9 @@ public class AlipayPassInstanceUpdateModel extends AlipayObject {
 	@ApiField("channel_id")
 	private String channelId;
 
-	/**
-	 * 商户指定卡券唯一值，卡券JSON模板中fileInfo->serialNumber字段对应的值
-	 */
+//	/**
+//	 * 商户指定卡券唯一值，卡券JSON模板中fileInfo->serialNumber字段对应的值
+//	 */
 	@ApiField("serial_number")
 	private String serialNumber;
 

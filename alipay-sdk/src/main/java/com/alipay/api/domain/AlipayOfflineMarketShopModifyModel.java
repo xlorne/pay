@@ -134,9 +134,9 @@ public class AlipayOfflineMarketShopModifyModel extends AlipayObject {
 	@ApiField("latitude")
 	private String latitude;
 
-	/**
-	 * 门店营业执照图片，各行业所需的证照资质参见：https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.NBvQVP&treeId=78&articleId=104497&docType=1。
-	 */
+//	/**
+//	 * 门店营业执照图片，各行业所需的证照资质参见：https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.NBvQVP&treeId=78&articleId=104497&docType=1。
+//	 */
 	@ApiField("licence")
 	private String licence;
 
@@ -170,9 +170,9 @@ public class AlipayOfflineMarketShopModifyModel extends AlipayObject {
 	@ApiField("main_image")
 	private String mainImage;
 
-	/**
-	 * 主门店名  比如：肯德基；主店名里不要包含分店名，如“万塘路店”。主店名长度不能超过20个字符。【xxx店】、(xxx店)、（xxx店）、[xxx店]、<xxx店>、xxx店，等类似的主店名都是不合法的，如果需要录入分店，请填写到branch_shop_name字段中。
-	 */
+//	/**
+//	 * 主门店名  比如：肯德基；主店名里不要包含分店名，如“万塘路店”。主店名长度不能超过20个字符。【xxx店】、(xxx店)、（xxx店）、[xxx店]、<xxx店>、xxx店，等类似的主店名都是不合法的，如果需要录入分店，请填写到branch_shop_name字段中。
+//	 */
 	@ApiField("main_shop_name")
 	private String mainShopName;
 

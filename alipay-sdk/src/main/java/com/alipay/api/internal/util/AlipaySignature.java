@@ -341,13 +341,13 @@ public class AlipaySignature {
      *    <br>charset=UTF-8
      * <br>}
      * </p>
-     * @param params
+     * @param params    请求参数
      * @param alipayPublicKey 支付宝公钥
      * @param cusPrivateKey   商户私钥
      * @param isCheckSign     是否验签
      * @param isDecrypt       是否解密
      * @return 解密后明文，验签失败则异常抛出
-     * @throws AlipayApiException 
+     * @throws AlipayApiException 支付异常
      */
     public static String checkSignAndDecrypt(Map<String, String> params, String alipayPublicKey,
                                              String cusPrivateKey, boolean isCheckSign,
@@ -384,8 +384,9 @@ public class AlipaySignature {
      * @param cusPrivateKey   商户私钥
      * @param isCheckSign     是否验签
      * @param isDecrypt       是否解密
+     * @param signType        检验类型
      * @return 解密后明文，验签失败则异常抛出
-     * @throws AlipayApiException 
+     * @throws AlipayApiException 支付异常
      */
     public static String checkSignAndDecrypt(Map<String, String> params, String alipayPublicKey,
                                              String cusPrivateKey, boolean isCheckSign,
@@ -405,27 +406,27 @@ public class AlipaySignature {
         return bizContent;
     }
 
-    /**
-     * 加密并签名<br>
-     * <b>目前适用于公众号</b>
-     * @param bizContent      待加密、签名内容
-     * @param alipayPublicKey 支付宝公钥
-     * @param cusPrivateKey   商户私钥
-     * @param charset         字符集，如UTF-8, GBK, GB2312
-     * @param isEncrypt       是否加密，true-加密  false-不加密
-     * @param isSign          是否签名，true-签名  false-不签名
-     * @return 加密、签名后xml内容字符串
-     * <p>
-     * 返回示例：
-     * <alipay>
-     *  <response>密文</response>
-     *  <encryption_type>RSA</encryption_type>
-     *  <sign>sign</sign>
-     *  <sign_type>RSA</sign_type>
-     * </alipay>
-     * </p>
-     * @throws AlipayApiException 
-     */
+//    /**
+//     * 加密并签名<br>
+//     * <b>目前适用于公众号</b>
+//     * @param bizContent      待加密、签名内容
+//     * @param alipayPublicKey 支付宝公钥
+//     * @param cusPrivateKey   商户私钥
+//     * @param charset         字符集，如UTF-8, GBK, GB2312
+//     * @param isEncrypt       是否加密，true-加密  false-不加密
+//     * @param isSign          是否签名，true-签名  false-不签名
+//     * @return 加密、签名后xml内容字符串
+//     * <p>
+//     * 返回示例：
+//     * <alipay>
+//     *  <response>密文</response>
+//     *  <encryption_type>RSA</encryption_type>
+//     *  <sign>sign</sign>
+//     *  <sign_type>RSA</sign_type>
+//     * </alipay>
+//     * </p>
+//     * @throws AlipayApiException
+//     */
     public static String encryptAndSign(String bizContent, String alipayPublicKey,
                                         String cusPrivateKey, String charset, boolean isEncrypt,
                                         boolean isSign) throws AlipayApiException {
@@ -458,18 +459,18 @@ public class AlipaySignature {
         return sb.toString();
     }
     
-    /**
-     * 加密并签名<br>
-     * <b>目前适用于公众号</b>
-     * @param bizContent      待加密、签名内容
-     * @param alipayPublicKey 支付宝公钥
-     * @param cusPrivateKey   商户私钥
-     * @param charset         字符集，如UTF-8, GBK, GB2312
-     * @param isEncrypt       是否加密，true-加密  false-不加密
-     * @param isSign          是否签名，true-签名  false-不签名
-     * @return 加密、签名后xml内容字符串
-     * @throws AlipayApiException 
-     */
+//    /**
+//     * 加密并签名<br>
+//     * <b>目前适用于公众号</b>
+//     * @param bizContent      待加密、签名内容
+//     * @param alipayPublicKey 支付宝公钥
+//     * @param cusPrivateKey   商户私钥
+//     * @param charset         字符集，如UTF-8, GBK, GB2312
+//     * @param isEncrypt       是否加密，true-加密  false-不加密
+//     * @param isSign          是否签名，true-签名  false-不签名
+//     * @return 加密、签名后xml内容字符串
+//     * @throws AlipayApiException
+//     */
 
 //      返回示例：
 //            * <alipay>
@@ -522,7 +523,7 @@ public class AlipaySignature {
      * @param publicKey 公钥
      * @param charset   字符集，如UTF-8, GBK, GB2312
      * @return 密文内容
-     * @throws AlipayApiException
+     * @throws AlipayApiException   支付异常
      */
     public static String rsaEncrypt(String content, String publicKey,
                                     String charset) throws AlipayApiException {
@@ -567,7 +568,7 @@ public class AlipaySignature {
      * @param privateKey 私钥
      * @param charset    字符集，如UTF-8, GBK, GB2312
      * @return 明文内容
-     * @throws AlipayApiException
+     * @throws AlipayApiException   支付异常
      */
     public static String rsaDecrypt(String content, String privateKey,
                                     String charset) throws AlipayApiException {
