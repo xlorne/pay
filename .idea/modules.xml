@@ -3,15 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/alipay/alipay.iml" filepath="$PROJECT_DIR$/alipay/alipay.iml" />
-      <module fileurl="file://$PROJECT_DIR$/alipay/alipay.iml" filepath="$PROJECT_DIR$/alipay/alipay.iml" />
       <module fileurl="file://$PROJECT_DIR$/alipay-demo/alipay-demo.iml" filepath="$PROJECT_DIR$/alipay-demo/alipay-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/alipay-demo/alipay-demo.iml" filepath="$PROJECT_DIR$/alipay-demo/alipay-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/alipay-sdk/alipay-sdk.iml" filepath="$PROJECT_DIR$/alipay-sdk/alipay-sdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/alipay-sdk/alipay-sdk.iml" filepath="$PROJECT_DIR$/alipay-sdk/alipay-sdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pay.iml" filepath="$PROJECT_DIR$/.idea/pay.iml" />
       <module fileurl="file://$PROJECT_DIR$/weixin/weixin.iml" filepath="$PROJECT_DIR$/weixin/weixin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/weixin/weixin.iml" filepath="$PROJECT_DIR$/weixin/weixin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/weixin-demo/weixin-demo.iml" filepath="$PROJECT_DIR$/weixin-demo/weixin-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/weixin-demo/weixin-demo.iml" filepath="$PROJECT_DIR$/weixin-demo/weixin-demo.iml" />
     </modules>
   </component>

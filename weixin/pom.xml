@@ -5,7 +5,7 @@
 
     <groupId>com.github.1991wangliang</groupId>
     <artifactId>weixin-api</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <name>weixin-api</name>
     <url>https://github.com/1991wangliang/pay</url>
@@ -57,7 +57,7 @@
         <maven.compile.target>1.7</maven.compile.target>
         <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
 
-
+        <org.springframework-version>4.3.7.RELEASE</org.springframework-version>
     </properties>
 
     <dependencies>
@@ -75,11 +75,13 @@
             <version>1.2.34</version>
         </dependency>
 
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>1.5.7.RELEASE</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework-version}</version>
         </dependency>
+
 
     </dependencies>
 

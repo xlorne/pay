@@ -35,9 +35,15 @@
         <dependency>
             <groupId>com.github.1991wangliang</groupId>
             <artifactId>weixin-api</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>1.5.7.RELEASE</version>
+        </dependency>
 
     </dependencies>
 

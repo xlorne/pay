@@ -20,14 +20,14 @@ alipay-demo     阿里支付demo
   <dependency>
     <groupId>com.github.1991wangliang</groupId>
     <artifactId>alipay-sdk</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
   </dependency>
   
   
   <dependency>
     <groupId>com.github.1991wangliang</groupId>
     <artifactId>alipay-api</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
   </dependency>
   
   
