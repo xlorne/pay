@@ -32,7 +32,7 @@
     <scm>
         <connection>scm:git:https://github.com/1991wangliang/pay.git</connection>
         <developerConnection>scm:git:https://github.com/1991wangliang/pay.git</developerConnection>
-        <url>https://github.com/1991wangliang/lorne_core</url>
+        <url>https://github.com/1991wangliang/pay</url>
         <tag>v${project.version}</tag>
     </scm>
 
