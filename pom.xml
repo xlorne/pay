@@ -16,7 +16,9 @@
         <module>alipay-demo</module>
 
         <module>weixin-api</module>
+        <module>weixin-api-service</module>
         <module>weixin-demo</module>
+        <module>weixin-demo-service</module>
 
     </modules>
 

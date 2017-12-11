@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.1991wangliang</groupId>
-    <artifactId>weixin-api</artifactId>
+    <artifactId>weixin-api-service</artifactId>
     <version>1.0.2</version>
 
-    <name>weixin-api</name>
+    <name>weixin-api-service</name>
     <url>https://github.com/1991wangliang/pay</url>
-    <description>weixin-api project for Spring Project</description>
+    <description>weixin-api-service project for Spring Project</description>
 
 
     <licenses>

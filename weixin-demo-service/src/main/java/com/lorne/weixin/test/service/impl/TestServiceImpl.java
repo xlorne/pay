@@ -25,28 +25,28 @@ public class TestServiceImpl implements TestService {
      * @return
      */
     @Override
-    public Map<String, Object> microPay(String authCode ,String outTradeNo ) {
+    public Map<String, Object> microPay(String authCode ,String subMchId,String outTradeNo ) {
         String  deviceInfo ="001";
         String  body ="商品描述";
         int  totalFee = 1;
-        Map<String ,Object> map = creditCardPay.payMicropay(authCode ,deviceInfo ,body ,outTradeNo , totalFee );
+        Map<String ,Object> map = creditCardPay.payMicropay(authCode,subMchId ,deviceInfo ,body ,outTradeNo , totalFee );
         return map;
     }
 
 
     @Override
-    public Map<String, Object> queryOrder(String outTradeNo) {
-        return creditCardPay.getOrderQuery(outTradeNo);
+    public Map<String, Object> queryOrder(String subMchId,String outTradeNo) {
+        return creditCardPay.getOrderQuery(subMchId,outTradeNo);
     }
 
     @Override
-    public boolean refundOrder(String outTradeNo, int money) {
-        return creditCardPay.refundOrder(outTradeNo, KidUtils.getKid(),money,money);
+    public boolean refundOrder(String subMchId,String outTradeNo, int money) {
+        return creditCardPay.refundOrder(subMchId,outTradeNo, KidUtils.getKid(),money,money);
     }
 
 
     @Override
-    public boolean closeOrder(String outTradeNo) {
-        return creditCardPay.closeOrder(outTradeNo);
+    public boolean closeOrder(String subMchId,String outTradeNo) {
+        return creditCardPay.closeOrder(subMchId,outTradeNo);
     }
 }

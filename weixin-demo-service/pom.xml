@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.lorne.pay</groupId>
-    <artifactId>weixin-demo</artifactId>
+    <artifactId>weixin-demo-service</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>weixin-demo</name>
-    <description>weixin-demo project for Spring Boot</description>
+    <name>weixin-demo-service</name>
+    <description>weixin-demo-service project for Spring Boot</description>
 
 
     <parent>
@@ -34,7 +34,7 @@
 
         <dependency>
             <groupId>com.github.1991wangliang</groupId>
-            <artifactId>weixin-api</artifactId>
+            <artifactId>weixin-api-service</artifactId>
             <version>1.0.2</version>
             <exclusions>
                 <exclusion>
@@ -49,6 +49,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>1.5.7.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
         </dependency>
 
     </dependencies>

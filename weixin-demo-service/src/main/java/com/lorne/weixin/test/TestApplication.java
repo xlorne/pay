@@ -22,7 +22,8 @@ public class TestApplication {
 
 
     @Bean
-    public CreditCardPay wxConfig(){
+    public CreditCardPay creditCardPay(){
+
         WxConfig config = new WxConfig();
 
         ConfigHelper helper = new ConfigHelper("weixin.properties");
@@ -31,10 +32,14 @@ public class TestApplication {
         config.setAppSecret(helper.getStringValue("appSecret"));
         config.setCertLocalPath(helper.getStringValue("certPath"));
         config.setKey(helper.getStringValue("key"));
+        config.setCertPassword(helper.getStringValue("certPassword"));
         config.setNotifyUrl(helper.getStringValue("notifyUrl"));
 
         CreditCardPay creditCardPay = new CreditCardPay(config);
+
         return creditCardPay;
     }
+
+
 
 }

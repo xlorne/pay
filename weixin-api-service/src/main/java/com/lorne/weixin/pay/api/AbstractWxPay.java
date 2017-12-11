@@ -12,14 +12,13 @@ import java.util.Map;
  *
  * Created by yuliang on 2016/11/16.
  */
-public abstract class AbstractWxPay {
+public class AbstractWxPay {
 
     public static final String APP = "APP";
     public static final String NATIVE = "NATIVE";
     public static final String JSAPI = "JSAPI";
 
     protected WxConfig wxConfig;
-
 
     public AbstractWxPay() {
     }
@@ -28,37 +27,34 @@ public abstract class AbstractWxPay {
         this.wxConfig = wxConfig;
     }
 
-    public WxConfig getWxConfig() {
-        return wxConfig;
-    }
-
-    public void setWxConfig(WxConfig wxConfig) {
+    public void setPayInfo(WxConfig wxConfig) {
         this.wxConfig = wxConfig;
     }
 
 
     /**
      * 查询订单
-     *
+     * @param sub_mch_id 子商户id
      * @param out_trade_no 订单编号
      * @return  订单结果数据
      */
-    public Map<String, Object> getOrderQuery(String out_trade_no) {
-        return WeixinApiUtils.getOrderQuery(wxConfig, out_trade_no);
+    public Map<String, Object> getOrderQuery(String sub_mch_id,String out_trade_no) {
+        return WeixinApiUtils.getOrderQuery(wxConfig,sub_mch_id, out_trade_no);
     }
 
 
     /**
      * 申请退款
      *
+     * @param sub_mch_id 子商户Id
      * @param out_trade_no  订单号
      * @param out_refund_no 退款订单号
      * @param total_fee     订单金额
      * @param refund_fee    退款金额
      * @return  是否成功
      */
-    public boolean refundOrder(String out_trade_no, String out_refund_no, int total_fee, int refund_fee) {
-        Map<String, Object> map = WeixinApiUtils.refundOrder(wxConfig, out_trade_no, out_refund_no, total_fee, refund_fee);
+    public boolean refundOrder(String sub_mch_id,String out_trade_no, String out_refund_no, int total_fee, int refund_fee) {
+        Map<String, Object> map = WeixinApiUtils.refundOrder(wxConfig, sub_mch_id,out_trade_no, out_refund_no, total_fee, refund_fee);
         if ("SUCCESS".equals(map.get("return_code"))) {
             if (map.containsKey("result_code")) {
                 if ("SUCCESS".equals(map.get("result_code"))) {
@@ -72,33 +68,35 @@ public abstract class AbstractWxPay {
     /**
      * 退款进度查询
      *
+     * @param sub_mch_id 子商户Id
      * @param out_trade_no 订单号
      * @return  订单信息
      */
-    public Map<String, Object> refundQueryOrder(String out_trade_no) {
-        return WeixinApiUtils.refundQueryOrder(wxConfig, out_trade_no);
+    public Map<String, Object> refundQueryOrder(String sub_mch_id,String out_trade_no) {
+        return WeixinApiUtils.refundQueryOrder(wxConfig,sub_mch_id, out_trade_no);
     }
 
 
     /**
      * 检查订单是否支付成功
      *
+     * @param sub_mch_id 子商户Id
      * @param orderNumber 订单编号
      * @return 成功或失败
      */
-    public boolean checkOrderHasPay(String orderNumber) {
-        return WeixinApiUtils.hasOrder(wxConfig, orderNumber);
+    public boolean checkOrderHasPay(String  sub_mch_id,String orderNumber) {
+        return WeixinApiUtils.hasOrder(wxConfig,sub_mch_id, orderNumber);
     }
 
 
     /**
      * 关闭订单
-     *
+     * @param sub_mch_id 子商户Id
      * @param out_trade_no 订单号
      * @return  是否关闭
      */
-    public boolean closeOrder(String out_trade_no) {
-        return WeixinApiUtils.closeOrder(wxConfig, out_trade_no);
+    public boolean closeOrder(String  sub_mch_id,String out_trade_no) {
+        return WeixinApiUtils.closeOrder(wxConfig,sub_mch_id, out_trade_no);
     }
 
 
@@ -144,6 +142,7 @@ public abstract class AbstractWxPay {
 
 
 
+
     /**
      * 通过jscode赋值openid
      *
@@ -156,7 +155,6 @@ public abstract class AbstractWxPay {
         if (map != null) {
             return (String)map.get("openid");
         }
-        throw new ServiceException("获取openid 失败");
+        throw new ServiceException("获取openId 失败.");
     }
-
 }

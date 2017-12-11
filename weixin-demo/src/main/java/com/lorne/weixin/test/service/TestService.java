@@ -1,7 +1,5 @@
 package com.lorne.weixin.test.service;
 
-import com.lorne.core.framework.exception.ServiceException;
-
 import java.util.Map;
 
 /**
@@ -10,9 +8,16 @@ import java.util.Map;
 public interface TestService {
 
 
-    Map<String, Object> createOrder(String openId) throws ServiceException;
-
-
 
     Map<String,Object> microPay(String authCode ,String outTradeNo );
+
+
+    Map<String, Object> queryOrder(String outTradeNo) ;
+
+
+    boolean refundOrder(String outTradeNo,int money);
+
+    boolean closeOrder(String outTradeNo);
+
+
 }
