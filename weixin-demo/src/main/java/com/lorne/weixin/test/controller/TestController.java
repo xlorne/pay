@@ -20,12 +20,6 @@ public class TestController {
     @Autowired
     private TestService testService;
 
-    @RequestMapping("/index")
-    public Map<String,Object> index(@RequestParam("openId") String openId) throws ServiceException{
-        return testService.createOrder(openId);
-    }
-
-
     /**
      * 刷卡支付
      * @param

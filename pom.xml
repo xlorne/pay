@@ -13,7 +13,9 @@
     <modules>
         <module>alipay-sdk</module>
         <module>alipay-api</module>
+        <module>alipay-api-service</module>
         <module>alipay-demo</module>
+        <module>alipay-demo-service</module>
 
         <module>weixin-api</module>
         <module>weixin-api-service</module>

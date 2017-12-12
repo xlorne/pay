@@ -1,6 +1,4 @@
-package com.hou.aliPay.test.service;
-
-import java.util.Map;
+package com.lorne.alipay.test.service;
 
 /**
  * Created by houcunlu on 2017/10/19.
@@ -15,6 +13,14 @@ public interface TestService {
      */
     String barcodePay(String orderNo , String payCode , String storeId);
 
+
+    String queryOrder(String orderNo);
+
+
+    String refundOrder(String orderNo,String money);
+
+
+    String closeOrder(String orderNo);
 
 
 }

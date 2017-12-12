@@ -22,6 +22,10 @@ alipay-api      阿里支付api封装
 
 alipay-demo     阿里支付demo
 
+alipay-api-service      阿里服务商支付api封装
+
+alipay-demo-service     阿里服务商支付demo
+
 
 ```
   
@@ -31,6 +35,11 @@ alipay-demo     阿里支付demo
     <version>{last.version}</version>
   </dependency>
   
+  <dependency>
+    <groupId>com.github.1991wangliang</groupId>
+    <artifactId>alipay-api-service</artifactId>
+    <version>{last.version}</version>
+  </dependency>
   
   <dependency>
     <groupId>com.github.1991wangliang</groupId>
@@ -39,13 +48,12 @@ alipay-demo     阿里支付demo
   </dependency>
   
   
-    <dependency>
-      <groupId>com.github.1991wangliang</groupId>
-      <artifactId>weixin-api-service</artifactId>
-      <version>{last.version}</version>
-    </dependency>
+  <dependency>
+    <groupId>com.github.1991wangliang</groupId>
+    <artifactId>weixin-api-service</artifactId>
+    <version>{last.version}</version>
+  </dependency>
     
-
 ```
 
 

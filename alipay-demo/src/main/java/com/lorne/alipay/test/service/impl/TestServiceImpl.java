@@ -1,8 +1,8 @@
-package com.hou.aliPay.test.service.impl;
+package com.lorne.alipay.test.service.impl;
 
-import com.hou.aliPay.test.service.TestService;
-import com.hou.alipay.config.AliPayConfig;
-import com.hou.alipay.utils.AliPayUtils;
+import com.lorne.alipay.test.service.TestService;
+import com.lorne.alipay.config.AliPayConfig;
+import com.lorne.alipay.utils.AliPayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,10 +30,18 @@ public class TestServiceImpl implements TestService {
     }
 
 
+    @Override
+    public String queryOrder(String orderNo) {
+        return AliPayUtils.queryOrder(aliPayConfig,orderNo);
+    }
 
+    @Override
+    public String refundOrder(String orderNo, String money) {
+        return AliPayUtils.refundOrder(aliPayConfig,orderNo,money);
+    }
 
-
-
-
-
+    @Override
+    public String closeOrder(String orderNo) {
+        return AliPayUtils.closeOrder(aliPayConfig,orderNo);
+    }
 }

@@ -1,4 +1,4 @@
-package com.hou.alipay.config;
+package com.lorne.alipay.config;
 
 /**
  * Created by houcunlu on 2017/10/17.

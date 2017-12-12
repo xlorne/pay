@@ -1,6 +1,6 @@
-package com.hou.aliPay.test;
+package com.lorne.alipay.test;
 
-import com.hou.alipay.config.AliPayConfig;
+import com.lorne.alipay.config.AliPayConfig;
 import com.lorne.core.framework.utils.config.ConfigUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @SpringBootApplication
-public class AliPayConfiguration {
+public class AliPayApplication {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(AliPayConfiguration.class, args);
+        SpringApplication.run(AliPayApplication.class, args);
     }
 
     @Bean

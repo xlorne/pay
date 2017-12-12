@@ -1,17 +1,11 @@
-package com.hou.alipay.utils;
+package com.lorne.alipay.utils;
 
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
-import com.alipay.api.request.AlipayTradeCloseRequest;
-import com.alipay.api.request.AlipayTradePayRequest;
-import com.alipay.api.request.AlipayTradeQueryRequest;
-import com.alipay.api.request.AlipayTradeRefundRequest;
-import com.alipay.api.response.AlipayTradeCloseResponse;
-import com.alipay.api.response.AlipayTradePayResponse;
-import com.alipay.api.response.AlipayTradeQueryResponse;
-import com.alipay.api.response.AlipayTradeRefundResponse;
-import com.hou.alipay.config.AliPayConfig;
+import com.alipay.api.request.*;
+import com.alipay.api.response.*;
+import com.lorne.alipay.config.AliPayConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,6 +45,8 @@ public class AliPayUtils {
                 "    \"timeout_express\":\"2m\"," +
                 "    \"total_amount\":\""+totalAmount+"\"" +
                 "  }"); //设置业务参数
+
+        System.out.println(request.getBizContent());
         AlipayTradePayResponse response = null; //通过alipayClient调用API，获得对应的response类
         try {
             response = alipayClient.execute(request);
@@ -158,6 +154,104 @@ public class AliPayUtils {
         }
         return response.getBody();
     }
+
+
+
+
+    /**
+     * 通过code获取token
+     * @param payConfig 支付配置
+     * @param code   code
+     * @return  订单信息
+     */
+    public static String getAccessToken(AliPayConfig payConfig, String code) {
+        AlipayClient alipayClient = new DefaultAlipayClient(
+                AliPayConfig.URL,
+                payConfig.getAppId(),
+                payConfig.getAppPrivateKey(),
+                AliPayConfig.FORMAT,
+                AliPayConfig.CHARSET,
+                payConfig.getAlipayPublicKey(),
+                payConfig.getSignType());
+
+        AlipayOpenAuthTokenAppRequest request = new AlipayOpenAuthTokenAppRequest();
+        request.setBizContent("{" +
+                "    \"grant_type\":\"authorization_code\"," +
+                "    \"code\":\""+code+"\"" +
+                "  }");
+        AlipayOpenAuthTokenAppResponse response = null;
+        try {
+            response = alipayClient.execute(request);
+        } catch (AlipayApiException e) {
+            logger.error(e.getMessage());
+            return null;
+        }
+        return response.getBody();
+    }
+
+
+    /**
+     * 刷新token
+     * @param payConfig 支付配置
+     * @param token   token
+     * @return  订单信息
+     */
+    public static String refreshAccessToken(AliPayConfig payConfig, String token) {
+        AlipayClient alipayClient = new DefaultAlipayClient(
+                AliPayConfig.URL,
+                payConfig.getAppId(),
+                payConfig.getAppPrivateKey(),
+                AliPayConfig.FORMAT,
+                AliPayConfig.CHARSET,
+                payConfig.getAlipayPublicKey(),
+                payConfig.getSignType());
+
+        AlipayOpenAuthTokenAppRequest request = new AlipayOpenAuthTokenAppRequest();
+        request.setBizContent("{" +
+                "    \"grant_type\":\"authorization_code\"," +
+                "    \"refresh_token\":\""+token+"\"" +
+                "  }");
+        AlipayOpenAuthTokenAppResponse response = null;
+        try {
+            response = alipayClient.execute(request);
+        } catch (AlipayApiException e) {
+            logger.error(e.getMessage());
+            return null;
+        }
+        return response.getBody();
+    }
+
+
+    /**
+     * 查询订单状态
+     * @param payConfig 支付信息
+     * @param token token
+     * @return
+     */
+    public static String queryAccessToken(AliPayConfig payConfig, String token) {
+        AlipayClient alipayClient = new DefaultAlipayClient(
+                AliPayConfig.URL,
+                payConfig.getAppId(),
+                payConfig.getAppPrivateKey(),
+                AliPayConfig.FORMAT,
+                AliPayConfig.CHARSET,
+                payConfig.getAlipayPublicKey(),
+                payConfig.getSignType());
+
+        AlipayOpenAuthTokenAppQueryRequest request = new AlipayOpenAuthTokenAppQueryRequest();
+        request.setBizContent("{" +
+                "    \"app_auth_token\":\""+token+"\"" +
+                "  }");
+        AlipayOpenAuthTokenAppQueryResponse response = null;
+        try {
+            response = alipayClient.execute(request);
+        } catch (AlipayApiException e) {
+            logger.error(e.getMessage());
+            return null;
+        }
+        return response.getBody();
+    }
+
 
 
 }

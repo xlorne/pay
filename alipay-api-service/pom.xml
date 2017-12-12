@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.1991wangliang</groupId>
-    <artifactId>alipay-api</artifactId>
+    <artifactId>alipay-api-service</artifactId>
     <version>1.0.2</version>
 
     <name>alipay-api</name>
