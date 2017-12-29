@@ -134,4 +134,19 @@ public class WeixinApiUtils {
         Map<String, Object> map = WeixinUtils.pushMsg(accessToken,touser,templateId,formId,value);
         return map;
     }
+
+
+    public static boolean reverse(WxConfig wxConfig, String sub_mch_id, String out_trade_no) {
+
+        Map<String, Object> map = WeixinUtils.reverse(wxConfig,sub_mch_id, out_trade_no);
+        if (null != map) {
+            String return_code = (String)map.get("return_code");
+            String result_code = (String)map.get("result_code");
+            if (return_code.equals("SUCCESS") && result_code.equals("SUCCESS")) {
+                // 订单状态
+                return "OK".equals(map.get("return_msg"));
+            }
+        }
+        return false;
+    }
 }

@@ -101,6 +101,18 @@ public class AbstractWxPay {
 
 
     /**
+     * 撤销订单
+     * @param sub_mch_id 子商户Id
+     * @param out_trade_no 订单号
+     * @return  是否关闭
+     */
+    public boolean reverse(String  sub_mch_id,String out_trade_no) {
+        return WeixinApiUtils.reverse(wxConfig,sub_mch_id, out_trade_no);
+    }
+
+
+
+    /**
      * 小程序获取用户openid与sessionkey
      *
      * @param jsCode 来自小程序的jscode

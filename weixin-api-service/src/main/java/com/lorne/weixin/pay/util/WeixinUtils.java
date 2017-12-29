@@ -200,4 +200,30 @@ public class WeixinUtils {
         }
         return map;
     }
+
+
+
+    public static Map<String,Object> reverse(WxConfig wxConfig, String sub_mch_id, String out_trade_no) {
+
+        ReverseOrderReqData reqData = new ReverseOrderReqData(wxConfig.getKey(), wxConfig.getAppId(), wxConfig.getMchId(),sub_mch_id, out_trade_no);
+        String postDataXML = reqData.toXml();
+        LogUtils.logResult("请求撤销订单", postDataXML);
+        try {
+            HttpsRequest httpsRequest = new HttpsRequest(wxConfig);
+            String res = httpsRequest.sendPost(HttpApiUrl.PAY_REVERSE_ORDER_API, postDataXML);
+            LogUtils.logResult("响应撤销", res);
+            Map<String, Object> map = XMLParser.getMapFromXML(res);
+            return map;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+
+
+
+
+
 }

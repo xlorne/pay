@@ -36,6 +36,10 @@ public class HttpApiUrl {
     public static String SEND_MSG = "https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=%s";
 
 
+    // 9) 撤销订单
+    public static String PAY_REVERSE_ORDER_API = "https://api.mch.weixin.qq.com/secapi/pay/reverse";
+
+
 
 
 }
