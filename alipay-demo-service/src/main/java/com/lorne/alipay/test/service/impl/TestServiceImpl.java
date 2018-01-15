@@ -37,7 +37,7 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public String refundOrder(String orderNo, String authToken, String money) {
-        return  AliPayUtils.refundOrder(aliPayConfig,orderNo,authToken,money);
+        return  AliPayUtils.refundOrder(aliPayConfig,orderNo,authToken,authToken,money);
     }
 
 
