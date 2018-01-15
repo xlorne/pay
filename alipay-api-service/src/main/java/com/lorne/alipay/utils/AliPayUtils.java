@@ -98,7 +98,7 @@ public class AliPayUtils {
      * @param refundAmount  退款金额
      * @return
      */
-    public static String refundOrder(AliPayConfig payConfig, String orderNo,String authToken,String refundAmount) {
+    public static String refundOrder(AliPayConfig payConfig, String orderNo, String out_request_no, String authToken,String refundAmount) {
         AlipayClient alipayClient = new DefaultAlipayClient(
                 AliPayConfig.URL,
                 payConfig.getAppId(),
@@ -110,6 +110,7 @@ public class AliPayUtils {
         AlipayTradeRefundRequest request = new AlipayTradeRefundRequest();
         request.setBizContent("{" +
                 "\"out_trade_no\":\""+orderNo+"\"," +
+                "\"out_request_no\":\""+out_request_no+"\"," +
                 "\"refund_amount\":"+refundAmount+"" +
                 "  }");
         AlipayTradeRefundResponse response = null;
@@ -205,7 +206,7 @@ public class AliPayUtils {
 
         AlipayOpenAuthTokenAppRequest request = new AlipayOpenAuthTokenAppRequest();
         request.setBizContent("{" +
-                "    \"grant_type\":\"authorization_code\"," +
+                "    \"grant_type\":\"refresh_token\"," +
                 "    \"refresh_token\":\""+token+"\"" +
                 "  }");
         AlipayOpenAuthTokenAppResponse response = null;
