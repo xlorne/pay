@@ -59,8 +59,7 @@ public class TestServiceImpl implements TestService {
     @Override
     public Map<String, Object> transfers(String openid, int amount) {
         String partner_trade_no = KidUtils.getKid();
-        creditCardPay.transfers(partner_trade_no,openid,"NO_CHECK","",amount,"奖金","192.168.2.1");
-        return null;
+        return creditCardPay.transfers(partner_trade_no,openid,"NO_CHECK","",amount,"奖金","192.168.2.1");
     }
 
 
