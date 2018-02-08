@@ -85,6 +85,11 @@ public class WeixinApiUtils {
         return WeixinUtils.refundQuery(config, out_trade_no);
     }
 
+    public static Map<String, Object> transfers(WxConfig wxConfig, String partner_trade_no, String openid, String check_name,
+                                                String re_user_name, int amount, String desc, String spbill_create_ip) {
+        return WeixinUtils.transfers(wxConfig,partner_trade_no,openid,check_name,re_user_name,amount,desc,spbill_create_ip);
+    }
+
     public static boolean closeOrder(WxConfig config, String out_trade_no) {
         Map<String, Object> map = WeixinUtils.closeOrder(config, out_trade_no);
         if (null != map) {
@@ -134,4 +139,6 @@ public class WeixinApiUtils {
         Map<String, Object> map = WeixinUtils.pushMsg(accessToken,touser,templateId,formId,value);
         return map;
     }
+
+
 }

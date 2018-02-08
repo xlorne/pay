@@ -1,6 +1,7 @@
 package com.lorne.weixin.test;
 
 import com.lorne.core.framework.utils.config.ConfigHelper;
+import com.lorne.weixin.pay.api.AccountPay;
 import com.lorne.weixin.pay.api.CreditCardPay;
 import com.lorne.weixin.pay.model.WxConfig;
 import org.springframework.boot.SpringApplication;
@@ -22,7 +23,7 @@ public class TestApplication {
 
 
     @Bean
-    public CreditCardPay wxConfig(){
+    public CreditCardPay creditCardPay(){
         WxConfig config = new WxConfig();
 
         ConfigHelper helper = new ConfigHelper("weixin.properties");
@@ -32,9 +33,26 @@ public class TestApplication {
         config.setCertLocalPath(helper.getStringValue("certPath"));
         config.setKey(helper.getStringValue("key"));
         config.setNotifyUrl(helper.getStringValue("notifyUrl"));
-
+        config.setCertPassword(helper.getStringValue("certPassword"));
         CreditCardPay creditCardPay = new CreditCardPay(config);
         return creditCardPay;
+    }
+
+
+    @Bean
+    public AccountPay accountPay(){
+        WxConfig config = new WxConfig();
+
+        ConfigHelper helper = new ConfigHelper("weixin.properties");
+        config.setAppId(helper.getStringValue("appId"));
+        config.setMchId(helper.getStringValue("mchId"));
+        config.setAppSecret(helper.getStringValue("appSecret"));
+        config.setCertLocalPath(helper.getStringValue("certPath"));
+        config.setKey(helper.getStringValue("key"));
+        config.setNotifyUrl(helper.getStringValue("notifyUrl"));
+        config.setCertPassword(helper.getStringValue("certPassword"));
+        AccountPay accountPay = new AccountPay(config);
+        return accountPay;
     }
 
 }

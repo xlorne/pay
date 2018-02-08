@@ -20,4 +20,9 @@ public interface TestService {
     boolean closeOrder(String outTradeNo);
 
 
+    Map<String,Object> transfers( String openid, int amount);
+
+    Map<String,Object> accountPay(int amount, String openId);
+
+    Map<String,Object> getOpenId(String code);
 }

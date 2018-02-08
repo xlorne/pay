@@ -35,8 +35,8 @@ public class HttpApiUrl {
     // 8) 发送模板消息
     public static String SEND_MSG = "https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=%s";
 
-
-
+    // 9) 企业向个人支付
+    public static String PAY_PROMOTION_TRANSFERS = "https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers";
 
 }
 

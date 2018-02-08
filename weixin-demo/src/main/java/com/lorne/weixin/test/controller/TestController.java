@@ -32,4 +32,41 @@ public class TestController {
     }
 
 
+    /**
+     * 企业支付
+     * @param
+     * @return
+     * @throws ServiceException
+     */
+    @RequestMapping("/transfers")
+    public Map<String,Object> transfers(@RequestParam("openid") String openid,
+                                        @RequestParam("amount") int amount) throws ServiceException{
+        return testService.transfers(openid,amount);
+    }
+
+
+    /**
+     * 小程序付款
+     * @param
+     * @return
+     * @throws ServiceException
+     */
+    @RequestMapping("/accountPay")
+    public Map<String,Object> accountPay(@RequestParam("price") int price,
+                                         @RequestParam("openId") String openId) throws ServiceException{
+        return testService.accountPay(price,openId);
+    }
+
+
+    /**
+     * 小程序openId
+     * @param
+     * @return
+     * @throws ServiceException
+     */
+    @RequestMapping("/getOpenId")
+    public Map<String,Object> getOpenId(@RequestParam("code") String code) throws ServiceException{
+        return testService.getOpenId(code);
+    }
+
 }

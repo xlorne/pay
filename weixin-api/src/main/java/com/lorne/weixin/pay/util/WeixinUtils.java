@@ -112,6 +112,24 @@ public class WeixinUtils {
     }
 
 
+    public static Map<String, Object> transfers(WxConfig config, String partner_trade_no, String openid, String check_name,
+                                                String re_user_name, int amount, String desc, String spbill_create_ip) {
+        TransfersReqData reqData = new TransfersReqData(config.getKey(), config.getAppId(), config.getMchId(), partner_trade_no,openid,check_name,re_user_name,amount,desc,spbill_create_ip);
+        String postDataXML = reqData.toXml();
+        LogUtils.logResult("请求企业付款订单", postDataXML);
+        try {
+            HttpsRequest httpsRequest = new HttpsRequest(config);
+            String res = httpsRequest.sendPost(HttpApiUrl.PAY_PROMOTION_TRANSFERS, postDataXML);
+            LogUtils.logResult("响应企业付款订单", res);
+
+            Map<String, Object> map = XMLParser.getMapFromXML(res);
+            return map;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static Map<String, Object> refundQuery(WxConfig config, String out_trade_no) {
         RefundQueryReqData reqData = new RefundQueryReqData(config.getKey(), config.getAppId(), config.getMchId(), out_trade_no);
         String postDataXML = reqData.toXml();
@@ -202,4 +220,6 @@ public class WeixinUtils {
         }
         return map;
     }
+
+
 }
