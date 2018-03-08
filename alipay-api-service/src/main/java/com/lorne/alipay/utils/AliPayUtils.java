@@ -84,7 +84,7 @@ public class AliPayUtils {
                 "    \"store_id\":\""+storeId+"\"," +
                 "    \"timeout_express\":\"2m\"," +
                 "    \"extend_params\":{" +
-                "    \"sys_service_provider_id\":\""+sys_service_provider_id+"\\" +
+                "    \"sys_service_provider_id\":\""+sys_service_provider_id+"\"" +
                 "    }," +
                 "    \"total_amount\":\""+totalAmount+"\"" +
                 "  }"); //设置业务参数
