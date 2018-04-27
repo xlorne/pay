@@ -198,6 +198,37 @@ public class AliPayUtils {
     }
 
 
+    /**
+     * 撤销订单
+     * @param payConfig 支付配置
+     * @param orderNo   订单号
+     * @return  订单信息
+     */
+    public static String cancelOrder(AliPayConfig payConfig, String orderNo,String authToken) {
+        AlipayClient alipayClient = new DefaultAlipayClient(
+                AliPayConfig.URL,
+                payConfig.getAppId(),
+                payConfig.getAppPrivateKey(),
+                AliPayConfig.FORMAT,
+                AliPayConfig.CHARSET,
+                payConfig.getAlipayPublicKey(),
+                payConfig.getSignType());
+
+        AlipayTradeCancelRequest request = new AlipayTradeCancelRequest();
+        request.setBizContent("{" +
+                "\"out_trade_no\":\""+orderNo+"\"" +
+                "  }");
+        AlipayTradeCancelResponse response = null;
+        try {
+            response = alipayClient.execute(request,null,authToken);
+        } catch (AlipayApiException e) {
+            logger.error(e.getMessage());
+            return null;
+        }
+        return response.getBody();
+    }
+
+
 
     /**
      * 通过code获取token
