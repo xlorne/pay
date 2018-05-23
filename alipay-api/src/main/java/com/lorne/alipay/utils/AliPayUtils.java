@@ -26,7 +26,7 @@ public class AliPayUtils {
      * @param totalAmount 总金额
      * @return  支付结果
      */
-    public static String barcodePay(AliPayConfig payConfig, String orderNo , String  payCode , String title , String storeId , String totalAmount) {
+    public static String barcodePay(AliPayConfig payConfig, String orderNo , String  payCode , String title , String storeId , String totalAmount , String timeoutExpress) {
         AlipayClient alipayClient = new DefaultAlipayClient(
                 AliPayConfig.URL,
                 payConfig.getAppId(),
@@ -42,7 +42,7 @@ public class AliPayUtils {
                 "    \"auth_code\":\""+payCode+"\"," +
                 "    \"subject\":\""+title+"\"," +
                 "    \"store_id\":\""+storeId+"\"," +
-                "    \"timeout_express\":\"2m\"," +
+                "    \"timeout_express\":\""+timeoutExpress+"\"," +
                 "    \"total_amount\":\""+totalAmount+"\"" +
                 "  }"); //设置业务参数
 
