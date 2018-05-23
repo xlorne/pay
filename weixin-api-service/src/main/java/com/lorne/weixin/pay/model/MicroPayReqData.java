@@ -67,11 +67,24 @@ public class MicroPayReqData  extends MapXml {
     private String spbill_create_ip = "";
 
 
+    /**
+     * 订单关闭日期
+     */
+    private String  time_expire;
 
 
-    public  MicroPayReqData(String appId , String mchId ,String subMchId, String authCode , String key , String deviceInfo ,String body,
-                             String outTradeNo , int totalFee , String spbillCreateIp){
+    public String getTime_expire() {
+        return time_expire;
+    }
 
+    public void setTime_expire(String time_expire) {
+        this.time_expire = time_expire;
+    }
+
+    public  MicroPayReqData(String appId , String mchId , String subMchId, String authCode , String key , String deviceInfo , String body,
+                            String outTradeNo , int totalFee , String spbillCreateIp , String timeExpire){
+
+        time_expire = timeExpire;
         appid=appId;
         mch_id = mchId;
         sub_mch_id = subMchId;

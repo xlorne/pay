@@ -53,9 +53,9 @@ public class WeixinUtils {
      * @param totalFee    订单金额
      * @return  支付结果
      */
-    public  static Map<String , Object> payMicropay(WxConfig config ,String authCode ,String subMchId, String deviceInfo , String body , String outTradeNo ,String  ip ,int  totalFee ){
+    public  static Map<String , Object> payMicropay(WxConfig config ,String authCode ,String subMchId, String deviceInfo , String body , String outTradeNo ,String  ip ,int  totalFee, String timeExpire  ){
         MicroPayReqData mPayReqData = new MicroPayReqData(
-                config.getAppId() , config.getMchId(),subMchId , authCode , config.getKey() , deviceInfo , body ,outTradeNo , totalFee ,ip
+                config.getAppId() , config.getMchId(),subMchId , authCode , config.getKey() , deviceInfo , body ,outTradeNo , totalFee ,ip , timeExpire
         );
         String postDataXML = mPayReqData.toXml();
         LogUtils.logResult("请求统一下单参数", postDataXML);
