@@ -33,14 +33,14 @@ public class CreditCardPay extends AbstractWxPay {
                                                       String deviceInfo ,
                                                       String body ,
                                                       String outTradeNo ,
-                                                      int totalFee ){
+                                                      int totalFee , String timeExpire ){
 
         // 调用微信支付API的机器IP
         String ip = "127.0.0.1";
         /**
          * 提交刷卡支付
          */
-        Map<String, Object> map = WeixinUtils.payMicropay( wxConfig, authCode, subMchId, deviceInfo , body, outTradeNo ,ip , totalFee );
+        Map<String, Object> map = WeixinUtils.payMicropay( wxConfig, authCode, subMchId, deviceInfo , body, outTradeNo ,ip , totalFee , timeExpire );
         return  map;
     }
 
