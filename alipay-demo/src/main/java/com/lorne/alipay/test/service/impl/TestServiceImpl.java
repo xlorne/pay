@@ -26,7 +26,8 @@ public class TestServiceImpl implements TestService {
     public String barcodePay(String orderNo , String payCode , String storeId ) {
         String title ="订单标题";
         String totalAmount = "0.01";
-        return AliPayUtils.barcodePay(aliPayConfig,orderNo , payCode ,title , storeId , totalAmount);
+        String timeoutExpress = "";
+        return AliPayUtils.barcodePay(aliPayConfig,orderNo , payCode ,title , storeId , totalAmount,timeoutExpress);
     }
 
 

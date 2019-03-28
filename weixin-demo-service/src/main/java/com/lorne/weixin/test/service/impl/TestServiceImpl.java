@@ -18,7 +18,6 @@ public class TestServiceImpl implements TestService {
     @Autowired
     private CreditCardPay creditCardPay;
 
-
     /**
      * 刷卡支付
      * @param
@@ -29,7 +28,8 @@ public class TestServiceImpl implements TestService {
         String  deviceInfo ="001";
         String  body ="商品描述";
         int  totalFee = 1;
-        Map<String ,Object> map = creditCardPay.payMicropay(authCode,subMchId ,deviceInfo ,body ,outTradeNo , totalFee );
+        String  timeExpire = "";
+        Map<String ,Object> map = creditCardPay.payMicropay(authCode,subMchId ,deviceInfo ,body ,outTradeNo , totalFee,timeExpire );
         return map;
     }
 
